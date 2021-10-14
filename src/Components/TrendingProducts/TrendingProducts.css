@@ -1,0 +1,14 @@
+.trending_header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.trending_header p {
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: white;
+    box-shadow: 10px 10px  8px -9px rgba(0, 0, 0, 0.75);
+    width: 50%;
+    border-radius: 5px;
+    color: grey;
+}

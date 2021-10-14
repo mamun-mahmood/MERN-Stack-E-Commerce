@@ -1,0 +1,19 @@
+.right_side_section {
+    flex: 0.33;
+    text-align: center;
+    height: 60vh;
+}
+.second_inputs {
+    display: flex;
+    justify-content: space-around;
+}
+.second_inputs > input {
+    width: 45%;
+    border-radius: 20px;
+    padding: 10px;
+}
+@media (max-width: 1100px) {
+    .right_side_section {
+        display: none;
+    }
+}

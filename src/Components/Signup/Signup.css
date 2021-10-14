@@ -1,0 +1,9 @@
+.new_user_btn:hover {
+    cursor: pointer;
+    color: black;
+}
+.new_user_btn {
+    color: #1976d3;
+    font-size: 17px;
+    text-decoration: underline;
+}

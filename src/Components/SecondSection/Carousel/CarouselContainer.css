@@ -1,0 +1,17 @@
+.carousel_img {
+  height: 60vh;
+  overflow: hidden;
+}
+.carousel_container {
+  flex: 1;
+  height: 60vh;
+}
+@media (max-width: 800px) {
+  .carousel_container {
+    height: 40vh;
+  }
+  .carousel_img {
+    height: 40vh;
+    overflow: hidden;
+  }
+}
