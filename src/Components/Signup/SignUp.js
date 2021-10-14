@@ -15,51 +15,37 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./Signup.css";
 import gLogo from "../../Resources/google.svg";
 import fbLogo from "../../Resources/facebook.svg";
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
-
+import {signInWithPopup} from 'firebase/auth'
+import {auth, provider} from '../../FirebaseConfig'
 const theme = createTheme();
 
 export default function SignIn() {
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, provider)
+    .then(res => {
+      console.log(res);
+    })
+    .catch(err => console.log(err))
+  }
   const [newUser, setNewUser] = React.useState(false);
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    // eslint-disable-next-line no-console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
   const matchPassword = (e) => {
     // if (e.target.name === "confirmPassword") {
-    //   if (e.target.value === validPassword) {
-    //     const newUserInfo = { ...user };
-    //     newUserInfo.error = "Password Matched";
-    //     newUserInfo.matchedPassword = true;
-    //     setUser(newUserInfo);
-    //   } else {
-    //     const newUserInfo = { ...user };
-    //     newUserInfo.error = "Password is not matching";
-    //     newUserInfo.matchedPassword = false;
+      //   if (e.target.value === validPassword) {
+        //     const newUserInfo = { ...user };
+        //     newUserInfo.error = "Password Matched";
+        //     newUserInfo.matchedPassword = true;
+        //     setUser(newUserInfo);
+        //   } else {
+          //     const newUserInfo = { ...user };
+          //     newUserInfo.error = "Password is not matching";
+          //     newUserInfo.matchedPassword = false;
     //     setUser(newUserInfo);
     //   }
     // }
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+   
   };
   return (
     <ThemeProvider theme={theme}>
@@ -164,7 +150,7 @@ export default function SignIn() {
               <h5>Sign In with</h5>
               <div style={{display: 'flex', justifyContent: "space-around", paddingBottom: '10px'}}>
                 <img
-                  // onClick={googleSignIn}
+                  onClick={signInWithGoogle}
                   style={{ width: "35px", marginRight: "20px" }}
                   src={gLogo}
                   alt=""
