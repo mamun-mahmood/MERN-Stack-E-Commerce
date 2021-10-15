@@ -11,7 +11,7 @@ import Testimonial from "./Components/Testimonial/Testimonial";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignUp from "./Components/Signup/SignUp";
-import Secondbar from './Components/Header/Navbar/Navbar'
+import Secondbar from "./Components/Header/Navbar/Navbar";
 // import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import ProductDetailsPage from "./Components/ProductDetails/ProductDetailsPage";
 
@@ -20,8 +20,8 @@ function App() {
     <Router>
       <Header /> {/* TopBanner Header and secondBanner */}
       <Route exact path="/">
-      <Secondbar/>
-        {/* <SecondSection /> side category mid slider and right side stuffs */}
+        <Secondbar />
+        <SecondSection />
         <FlashSell />
         <Midsection />
         <TrendingProducts />
@@ -30,11 +30,11 @@ function App() {
         <ServiceCategory />
         <Testimonial />
       </Route>
-      <Route path="/signInuserPage"> 
-        <SignUp/>
+      <Route path="/signInuserPage">
+        <SignUp />
       </Route>
       <Route path="/product_details">
-        <ProductDetailsPage/>
+        <ProductDetailsPage />
       </Route>
       <Footer />
       <Switch></Switch>
