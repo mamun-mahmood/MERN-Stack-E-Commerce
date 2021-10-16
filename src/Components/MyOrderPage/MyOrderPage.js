@@ -9,7 +9,7 @@ export default function MyOrderPage() {
       </p>
       <div className="container">
         <div className="row">
-          <div className="left_section ml-5 col-md-2 bg-white p-0 round p-2">
+          <div className="left_section col-md-2 col-12 w-100 bg-white p-0 round p-2">
             <div className="border_bottom">
               <p className="bg-secondary pl-2 box_shadow m-1 text-white">
                 Hello
@@ -34,7 +34,7 @@ export default function MyOrderPage() {
               <p className="bg-light pl-3 m-1 p_style">Sell on ImpoNexpo</p>
             </div>
           </div>
-          <div className="col-md-9 ml-3 p-0">
+          <div className="col-md-9 ml-md-3 p-0  mt-2">
             <div className="d-flex round border_bottom ">
               <p className="top_menu_options p_style">All</p>
               <p className="top_menu_options p_style">To Pay</p>
