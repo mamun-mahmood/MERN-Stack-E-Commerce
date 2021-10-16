@@ -1,7 +1,5 @@
 import React from "react";
 import "./SideCatagory.css";
-import Furniture from "../../../Resources/CategoryIcons/products-pngrepo-com.png";
-import { DropdownButton, Dropdown } from "react-bootstrap";
 import KeyboardArrowRightSharpIcon from '@mui/icons-material/KeyboardArrowRightSharp';
 
 export default function SideCategory() {
