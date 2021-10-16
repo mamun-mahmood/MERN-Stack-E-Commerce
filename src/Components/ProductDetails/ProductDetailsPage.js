@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProductDetails.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -17,8 +17,36 @@ import DoNotDisturbAltRoundedIcon from "@mui/icons-material/DoNotDisturbAltRound
 import ReturnIcon from "../../Resources/return-pngrepo-com.png";
 import ForumRoundedIcon from "@mui/icons-material/ForumRounded";
 import ProductCar2 from "../ProductCard2/ProductCar2";
-import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
+import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
+import ContentSwiper from "../ContentSwiper/ContentSwiper";
 export default function ProductDetailsPage() {
+  const slideData = [
+    {
+      item:
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlrZSUyMHNob2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+    },
+    {
+      item:
+        "https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/i1-73ec2548-82c2-45f6-a395-15acdfa502d0/superrep-go-mens-training-shoes-19sK4X.png",
+    },
+    {
+      item:
+        "https://static.nike.com/a/images/f_auto/dpr_3.0/h_500,c_limit/g1ljiszo4qhthfpluzbt/nike-joyride.jpg",
+    },
+    {
+      item:
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlrZSUyMHNob2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+    },
+    {
+      item:
+        "https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/i1-73ec2548-82c2-45f6-a395-15acdfa502d0/superrep-go-mens-training-shoes-19sK4X.png",
+    },
+    {
+      item:
+        "https://static.nike.com/a/images/f_auto/dpr_3.0/h_500,c_limit/g1ljiszo4qhthfpluzbt/nike-joyride.jpg",
+    },
+  ];
+  const [companyDetails, setCompanyDetails] = useState(true);
   return (
     <div className="card">
       <div className="container-fluid p-4">
@@ -43,7 +71,7 @@ export default function ProductDetailsPage() {
               </div>
             </Carousel>
           </div>
-          <div className="bg-white col-md-5 g-0">
+          <div className="product_info_section bg-white col-md-5 g-0">
             <h4 className="product-title">Nike Air Max Zephyr 111362</h4>
             <div
               className="rating"
@@ -182,7 +210,7 @@ export default function ProductDetailsPage() {
               </Button>
             </div>
           </div>
-          <div className="col-md-3 bg-light h-100">
+          <div className="rigt_side_section col-md-3 bg-light h-100">
             <p>Delivery Options</p>
             <div className="delivery_address ">
               <p>
@@ -285,7 +313,8 @@ export default function ProductDetailsPage() {
         </div>
       </div>
       <div className="ml-5">
-        <Button
+        <Button 
+        onClick={() => setCompanyDetails(true)}
           style={{
             marginRight: "5px",
             backgroundColor: "#346ccd",
@@ -296,6 +325,7 @@ export default function ProductDetailsPage() {
           Product Details
         </Button>
         <Button
+        onClick={() => setCompanyDetails(false)}
           style={{
             backgroundColor: "#d0d0d0",
             color: "grey",
@@ -313,41 +343,77 @@ export default function ProductDetailsPage() {
           <div className="col-md-8">
             <div className="container">
               <div className="row">
-                <div className="product_details_section col-md-12 bg-light round">
-                  <h6 className="mt-3" style={{ textAlign: "center" }}>
-                    Product details of <span>Nike Air Max Zephyr 111362</span>{" "}
-                  </h6>
-                  <div className="container-fluid">
-                    <div className="row">
-                      <div className="col-md-6">
-                        <ul>
-                          <li>Applicable Age: Youth</li>
-                          <li>Condition: New</li>
-                          <li>Source: Sports</li>
-                          <li>Heel: 1.96 Inch</li>
-                          <li>Initial Increase</li>
-                        </ul>
-                      </div>
-                      <div className="col-md-6">
-                        <h6>Description:</h6>
-                        <p>
-                          {" "}
-                          Lorem, ipsum dolor sit amet consectetur adipisicing
-                          elit. Veniam, neque delectus vero incidunt nisi omnis
-                          maxime ab sed! Obcaecati, doloribus.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Aliquam quaerat soluta a temporibus nihil,
-                          accusamus magnam. Impedit autem assumenda, nisi nam
-                          deserunt repellat doloribus, officiis dicta nemo cum
-                          facere blanditiis quibusdam optio consequatur nesciunt
-                          tempore?
-                        </p>
+                {companyDetails ? (
+                  <div className="product_details_section col-md-12 bg-light round">
+                    <h6 className="mt-3" style={{ textAlign: "center" }}>
+                      Product details of <span>Nike Air Max Zephyr 111362</span>{" "}
+                    </h6>
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-md-6">
+                          <ul>
+                            <li>Applicable Age: Youth</li>
+                            <li>Condition: New</li>
+                            <li>Source: Sports</li>
+                            <li>Heel: 1.96 Inch</li>
+                            <li>Initial Increase</li>
+                          </ul>
+                        </div>
+                        <div className="col-md-6">
+                          <h6>Description:</h6>
+                          <p>
+                            {" "}
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Veniam, neque delectus vero incidunt nisi
+                            omnis maxime ab sed! Obcaecati, doloribus.
+                          </p>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Aliquam quaerat soluta a temporibus nihil,
+                            accusamus magnam. Impedit autem assumenda, nisi nam
+                            deserunt repellat doloribus, officiis dicta nemo cum
+                            facere blanditiis quibusdam optio consequatur
+                            nesciunt tempore?
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                ) : (
+                  <div className="company_details col-md-12 bg-light round">
+                    <h6
+                      className="mt-3 text-dark"
+                      style={{ textAlign: "center" }}
+                    >
+                      Company Album
+                    </h6>
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-md-12">
+                          <ContentSwiper data={{ slideData }} />
+                        </div>
+                        <div className="col-md-12 mt-2">
+                          <h6>Description:</h6>
+                          <p>
+                            {" "}
+                            Lorem, ipsum dolor sit amet consectetur adipisicing
+                            elit. Veniam, neque delectus vero incidunt nisi
+                            omnis maxime ab sed! Obcaecati, doloribus.
+                          </p>
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Aliquam quaerat soluta a temporibus nihil,
+                            accusamus magnam. Impedit autem assumenda, nisi nam
+                            deserunt repellat doloribus, officiis dicta nemo cum
+                            facere blanditiis quibusdam optio consequatur
+                            nesciunt tempore?
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <div className="buyer_review_section col-md-12 mt-3 bg-light round">
                   <h6
                     className="w-100 bg-white p-1"
@@ -534,10 +600,15 @@ export default function ProductDetailsPage() {
                       Ask Question
                     </Button>
                   </div>
-                  <div className='pt-2 pl-2 mt-2' style={{border: '1px solid rgb(221, 220, 220)'}}>
+                  <div
+                    className="pt-2 pl-2 mt-2"
+                    style={{ border: "1px solid rgb(221, 220, 220)" }}
+                  >
                     <div className="question d-flex">
                       {/* <p className='w-100' style={{backgroundImage: `url(${ChatIcon})`,backgroundSize: '100%',color: 'black', backgroundRepeat: 'no-repeat', textAlign: 'center'}}>Q</p> */}
-                      <p className='mr-2' style={{color: '#326dcb'}}><ChatBubbleIcon/></p>
+                      <p className="mr-2" style={{ color: "#326dcb" }}>
+                        <ChatBubbleIcon />
+                      </p>
                       <p style={{ color: "black" }}>
                         How many color?
                         <br />
@@ -547,7 +618,9 @@ export default function ProductDetailsPage() {
                       </p>
                     </div>
                     <div className="answer d-flex">
-                    <p className='mr-2'><ChatBubbleIcon/></p>
+                      <p className="mr-2">
+                        <ChatBubbleIcon />
+                      </p>
                       {/* <p className='w-100' style={{backgroundImage: `url(${ChatIcon})`,backgroundSize: '100%',color: 'black', backgroundRepeat: 'no-repeat', textAlign: 'center'}}>Q</p> */}
                       <p style={{ color: "black" }}>
                         We have only four color.
@@ -556,10 +629,15 @@ export default function ProductDetailsPage() {
                       </p>
                     </div>
                   </div>
-                  <div className='pt-2 pl-2 mt-2' style={{border: '1px solid rgb(221, 220, 220)'}}>
+                  <div
+                    className="pt-2 pl-2 mt-2"
+                    style={{ border: "1px solid rgb(221, 220, 220)" }}
+                  >
                     <div className="question d-flex">
                       {/* <p className='w-100' style={{backgroundImage: `url(${ChatIcon})`,backgroundSize: '100%',color: 'black', backgroundRepeat: 'no-repeat', textAlign: 'center'}}>Q</p> */}
-                      <p className='mr-2' style={{color: '#326dcb'}}><ChatBubbleIcon/></p>
+                      <p className="mr-2" style={{ color: "#326dcb" }}>
+                        <ChatBubbleIcon />
+                      </p>
                       <p style={{ color: "black" }}>
                         How many color?
                         <br />
@@ -569,7 +647,9 @@ export default function ProductDetailsPage() {
                       </p>
                     </div>
                     <div className="answer d-flex">
-                    <p className='mr-2'><ChatBubbleIcon/></p>
+                      <p className="mr-2">
+                        <ChatBubbleIcon />
+                      </p>
                       {/* <p className='w-100' style={{backgroundImage: `url(${ChatIcon})`,backgroundSize: '100%',color: 'black', backgroundRepeat: 'no-repeat', textAlign: 'center'}}>Q</p> */}
                       <p style={{ color: "black" }}>
                         We have only four color.
@@ -598,7 +678,6 @@ export default function ProductDetailsPage() {
                 <div className="col-lg-6 col-md-12  col-6">
                   <ProductCar2 />
                 </div>
-                
               </div>
             </div>
           </div>
