@@ -11,16 +11,20 @@ import Testimonial from "./Components/Testimonial/Testimonial";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignUp from "./Components/Signup/SignUp";
-import Secondbar from "./Components/Header/Navbar/Navbar";
+
 // import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import ProductDetailsPage from "./Components/ProductDetails/ProductDetailsPage";
+import Secondbar from "./Components/Header/Secondbar/Secondbar";
+import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
+import PaymentPage from "./Components/PaymentPage/PaymentPage";
+import HelpPage from "./Components/HelpPage/HelpPage";
 
 function App() {
   return (
     <Router>
       <Header /> {/* TopBanner Header and secondBanner */}
       <Route exact path="/">
-        <Secondbar />
+        <Secondbar/>
         <SecondSection />
         <FlashSell />
         <Midsection />
@@ -35,6 +39,15 @@ function App() {
       </Route>
       <Route path="/product_details">
         <ProductDetailsPage />
+      </Route>
+      <Route path="/checkout_here">
+        <CheckoutPage/>
+      </Route>
+      <Route path="/payment_Page">
+        <PaymentPage/>
+      </Route>
+      <Route path="/help_page">
+        <HelpPage/>
       </Route>
       <Footer />
       <Switch></Switch>

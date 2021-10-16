@@ -45,6 +45,22 @@ export default function ProductDetailsPage() {
       item:
         "https://static.nike.com/a/images/f_auto/dpr_3.0/h_500,c_limit/g1ljiszo4qhthfpluzbt/nike-joyride.jpg",
     },
+    {
+      item:
+        "https://static.nike.com/a/images/f_auto/dpr_3.0/h_500,c_limit/g1ljiszo4qhthfpluzbt/nike-joyride.jpg",
+    },
+    {
+      item:
+        "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bmlrZSUyMHNob2V8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80",
+    },
+    {
+      item:
+        "https://static.nike.com/a/images/c_limit,w_318,f_auto/t_product_v1/i1-73ec2548-82c2-45f6-a395-15acdfa502d0/superrep-go-mens-training-shoes-19sK4X.png",
+    },
+    {
+      item:
+        "https://static.nike.com/a/images/f_auto/dpr_3.0/h_500,c_limit/g1ljiszo4qhthfpluzbt/nike-joyride.jpg",
+    },
   ];
   const [companyDetails, setCompanyDetails] = useState(true);
   return (
