@@ -25,13 +25,13 @@ export default function OrderDetails() {
             <p className="bg-light pl-3 m-1 p_style">Sell on ImpoNexpo</p>
           </div>
         </div>
-        <div className="col-md-9 ml-md-3 p-0  mt-2">
-          <p className="pl-2 text-primary" style={{ fontWeight: "560" }}>
+        <div className="col-md-9 ml-md-3 p-0 mt-2">
+          <p className="pl-2 text-dark" style={{ fontWeight: "560" }}>
             Order Details
           </p>
           <div>
             <div
-              className="bg-white pl-3  border_bottom mb-2"
+              className="bg-white pl-md-3   border_bottom mb-2"
               style={{ display: "flex", justifyContent: "space-between" }}
             >
               <div>
@@ -99,6 +99,7 @@ export default function OrderDetails() {
               </div>
             </div>
           </div>
+          <div className="container">
           <div className="row">
             <div className="col-md-8">
               <div className="bg-white p-2 mt-2">
@@ -137,6 +138,7 @@ export default function OrderDetails() {
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

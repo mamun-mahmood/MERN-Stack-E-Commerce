@@ -5,7 +5,7 @@ import "./MyOrderPage..css";
 export default function MyOrderPage() {
   return (
     <div>
-      <p style={{ textAlign: "center", color: "blue", fontWeight: "600" }}>
+      <p style={{ textAlign: "center", color: "black", fontWeight: "600" }}>
         My Orders
       </p>
       <div className="container">
