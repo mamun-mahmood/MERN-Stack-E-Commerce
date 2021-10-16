@@ -1,5 +1,6 @@
 import React from "react";
 import { Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./MyOrderPage..css";
 export default function MyOrderPage() {
   return (
@@ -63,7 +64,7 @@ export default function MyOrderPage() {
                 style={{ color: "grey" }}
               >
                 <div
-                className="border_bottom mb-2"
+                  className="border_bottom mb-2"
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <div>
@@ -76,7 +77,10 @@ export default function MyOrderPage() {
                     <p className="p_style pt-2">Manage</p>
                   </div>
                 </div>
-                <div className="w-100" style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div
+                  className="w-100"
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
                   <div className="d-flex">
                     <div>
                       <img
@@ -91,19 +95,28 @@ export default function MyOrderPage() {
                       />
                     </div>
                     <div className="ml-2">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
+                      <Link to="/order_details">
+                        <p>
+                        Nike Air Max Zephyr 111362
+                        </p>
+                      </Link>
                       <p>Product Catagory</p>
                     </div>
                   </div>
                   <div>
-                    <p className="text-dark" style={{ fontWeight: "530", backgroundColor: '#a2bcde', padding: '0px 10px', borderRadius: '12px' }}>
+                    <p
+                      className="text-dark"
+                      style={{
+                        fontWeight: "530",
+                        backgroundColor: "#a2bcde",
+                        padding: "0px 10px",
+                        borderRadius: "12px",
+                      }}
+                    >
                       In Progress
                     </p>
                   </div>
-                  <div>
-                  </div>
+                  <div></div>
                 </div>
               </div>
             </div>
@@ -113,7 +126,7 @@ export default function MyOrderPage() {
                 style={{ color: "grey" }}
               >
                 <div
-                className="border_bottom mb-2"
+                  className="border_bottom mb-2"
                   style={{ display: "flex", justifyContent: "space-between" }}
                 >
                   <div>
@@ -126,7 +139,10 @@ export default function MyOrderPage() {
                     <p className="p_style pt-2">Manage</p>
                   </div>
                 </div>
-                <div className="w-100" style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div
+                  className="w-100"
+                  style={{ display: "flex", justifyContent: "space-between" }}
+                >
                   <div className="d-flex">
                     <div>
                       <img
@@ -141,19 +157,28 @@ export default function MyOrderPage() {
                       />
                     </div>
                     <div className="ml-2">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      </p>
+                      <Link to="/order_details">
+                        <p>
+                          NikNike Air Max Zephyr 111362
+                        </p>
+                      </Link>
                       <p>Product Catagory</p>
                     </div>
                   </div>
                   <div>
-                    <p className="text-dark" style={{ fontWeight: "530", backgroundColor: 'RGB(255, 100, 100)', padding: '0px 10px', borderRadius: '12px' }}>
+                    <p
+                      className="text-dark"
+                      style={{
+                        fontWeight: "530",
+                        backgroundColor: "RGB(255, 100, 100)",
+                        padding: "0px 10px",
+                        borderRadius: "12px",
+                      }}
+                    >
                       Cancled
                     </p>
                   </div>
-                  <div>
-                  </div>
+                  <div></div>
                 </div>
               </div>
             </div>

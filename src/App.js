@@ -19,6 +19,7 @@ import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
 import PaymentPage from "./Components/PaymentPage/PaymentPage";
 import HelpPage from "./Components/HelpPage/HelpPage";
 import MyOrderPage from "./Components/MyOrderPage/MyOrderPage";
+import OrderDetails from "./Components/OrderDetails/OrderDetails";
 
 function App() {
   return (
@@ -52,6 +53,9 @@ function App() {
       </Route>
       <Route path="/my_orders">
         <MyOrderPage/>
+      </Route>
+      <Route path="/order_details">
+        <OrderDetails/>
       </Route>
       <Footer />
       <Switch></Switch>
