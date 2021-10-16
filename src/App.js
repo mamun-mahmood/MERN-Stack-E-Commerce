@@ -18,6 +18,7 @@ import Secondbar from "./Components/Header/Secondbar/Secondbar";
 import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
 import PaymentPage from "./Components/PaymentPage/PaymentPage";
 import HelpPage from "./Components/HelpPage/HelpPage";
+import MyOrderPage from "./Components/MyOrderPage/MyOrderPage";
 
 function App() {
   return (
@@ -48,6 +49,9 @@ function App() {
       </Route>
       <Route path="/help_page">
         <HelpPage/>
+      </Route>
+      <Route path="/my_orders">
+        <MyOrderPage/>
       </Route>
       <Footer />
       <Switch></Switch>
