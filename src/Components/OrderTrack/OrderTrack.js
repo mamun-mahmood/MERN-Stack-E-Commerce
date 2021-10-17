@@ -82,7 +82,53 @@ export default function OrderTrack() {
                 Your order is on the way with logistics company
               </span>
               <div>
-
+                <section class="time-line-box">
+                  <div class="swiper-container text-center">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="timestamp">
+                          <span class="date">12.07.2019</span>
+                        </div>
+                        <div class="status" style={{borderTop: '3px solid #455EFC'}}>
+                          <span>Order Placed</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="timestamp">
+                          <span class="date">12.07.2019</span>
+                        </div>
+                        <div class="status" style={{borderTop: '3px solid #455EFC'}}>
+                          <span>In Warehouse</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="timestamp">
+                          <span class="date">12.07.2019</span>
+                        </div>
+                        <div class="status" style={{borderTop: '3px solid white'}}>
+                          <span>Ready To Shipped</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="timestamp">
+                          <span class="date">12.07.2019</span>
+                        </div>
+                        <div class="status" style={{borderTop: '3px solid white'}}>
+                          <span>In Transit</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="timestamp">
+                          <span class="date">12.07.2019</span>
+                        </div>
+                        <div class="status" style={{borderTop: '3px solid white'}}>
+                          <span>Deliverd</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </section>
               </div>
             </p>
           </div>

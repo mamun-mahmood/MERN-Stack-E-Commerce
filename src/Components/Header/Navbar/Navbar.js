@@ -7,10 +7,11 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Avatar } from "@mui/material";
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import CompanyLogo from '../../../Resources/companyLogo.png'
+import { Link } from "react-router-dom";
 export default function NavbarContainer() {
   return (
     <div className="navbar_container bg-light">
-      <img className="navLogo" src={CompanyLogo} alt="" />
+      <Link to="/"><img className="navLogo" src={CompanyLogo} alt="" /></Link>
       <form action="">
         {/* <SearchOutlinedIcon/> */}
         <input className="search_field" type="text" />
@@ -21,7 +22,7 @@ export default function NavbarContainer() {
       </div>
       <div className="nav_right_items">
         <DashboardCustomizeIcon className="nav_icons" />
-        <p>My Order</p>
+        <p style={{textDecoration: 'none'}}><Link to="my_orders">My Order</Link></p>
       </div>
       <div className="nav_right_items">
         <AddShoppingCartIcon className="nav_icons" />

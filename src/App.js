@@ -11,8 +11,6 @@ import Testimonial from "./Components/Testimonial/Testimonial";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignUp from "./Components/Signup/SignUp";
-
-// import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import ProductDetailsPage from "./Components/ProductDetails/ProductDetailsPage";
 import Secondbar from "./Components/Header/Secondbar/Secondbar";
 import CheckoutPage from "./Components/CheckoutPage/CheckoutPage";
@@ -31,7 +29,7 @@ function App() {
         <Secondbar/>
         <SecondSection />
         <FlashSell />
-        <Midsection />
+        <Midsection /> 
         <TrendingProducts />
         <TrendingService />
         <TrendingLiveStream />

@@ -2,6 +2,7 @@ import React from "react";
 import "./Secondbar.css";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
+import { Link } from "react-router-dom";
 export default function Secondbar() {
   return (
     <div className="second_bar">
@@ -21,7 +22,8 @@ export default function Secondbar() {
         </div>
       </div>
       <p>CUSTOMER CARE</p>
-      <p>TRACK ORDER</p>
+      <Link to="/order_track"><div>
+      <p style={{textDecoration: 'none'}}>TRACK ORDER</p></div></Link>
       <div className="dropdown">
         <p className="dropbtn">
           HELP<ArrowDropDownOutlinedIcon />

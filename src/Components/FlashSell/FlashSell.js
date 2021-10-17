@@ -24,21 +24,21 @@ export default function FlashSell() {
     );
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
+    
     // Output the result in an element with id="demo"
 
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
+    // // document.getElementById("hours").value = hours;
+    // // document.getElementById("minutes").innerText = minutes;
+    // // document.getElementById("seconds").innerText = seconds;
 
-    if (distance < 0) {
-      clearInterval(x);
-      date++;
-      //   document.getElementById("hours").innerText = 0;
-      //   document.getElementById("minutes").innerText = 0;
-      //   document.getElementById("seconds").innerText = 0;
-      //   document.getElementById("expired").innerText = 'EXPIRED';
-    }
+    // if (distance < 0) {
+    //   clearInterval(x);
+    //   date++;
+    //   //   document.getElementById("hours").innerText = 0;
+    //   //   document.getElementById("minutes").innerText = 0;
+    //   //   document.getElementById("seconds").innerText = 0;
+    //   //   document.getElementById("expired").innerText = 'EXPIRED';
+    // }
   }, 1000);
   return (
     <div className="flash_sell rounded">
@@ -87,7 +87,7 @@ export default function FlashSell() {
                   padding: "6px",
                   borderRadius: "5px",
                 }}
-              ></span>
+              >00</span>
               :
               <span
                 id="minutes"
@@ -96,7 +96,7 @@ export default function FlashSell() {
                   padding: "6px",
                   borderRadius: "5px",
                 }}
-              ></span>
+              >00</span>
               :
               <span
                 id="seconds"
@@ -105,7 +105,7 @@ export default function FlashSell() {
                   padding: "6px",
                   borderRadius: "5px",
                 }}
-              ></span>
+              >00</span>
             </p>
             <div className="flash_sale_container">
               <div className="container">

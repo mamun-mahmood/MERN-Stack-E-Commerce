@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { Dropdown } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./MyProfile.css";
 export default function MyProfile() {
   return (
@@ -17,7 +18,9 @@ export default function MyProfile() {
             <p className="pl-3 box_shadow m-1 p_style">Vouchers</p>
           </div>
           <div className="bg-light">
-            <p className="p_style border_bottom m-0 mt-2 pl-3">My Orders</p>
+            <Link to="/my_orders">
+              <p className="p_style border_bottom m-0 mt-2 pl-3">My Orders</p>
+            </Link>
             <p className="p_style pl-3 m-0">My Returns</p>
             <p className="p_style border_bottom pb-2 pl-3">My Cancellations</p>
           </div>
@@ -68,7 +71,7 @@ export default function MyProfile() {
                   <div className="col-md-6 mt-5">
                     <p className="m-0">Gender</p>
                     <div className="d-flex bg-white round">
-                      <Dropdown style={{color: 'grey'}}>
+                      <Dropdown style={{ color: "grey" }}>
                         <Dropdown.Toggle variant="white" id="dropdown-basic">
                           Select You Gender
                         </Dropdown.Toggle>
