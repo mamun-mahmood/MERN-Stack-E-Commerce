@@ -1,6 +1,26 @@
 .card_main {
   border-radius: 15px;
+  height: 400px;
+}
+.card_top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.btn-outline-primary {
+  border: 2px solid #326dcb;
 }
 .btn-outline-primary:hover {
-    background-color: #326dcb;
+  background-color: #326dcb;
+}
+.icon_white {
+  color: white;
+}
+.icon_white:hover {
+  color: #326dcb;
+  cursor: pointer;
 }

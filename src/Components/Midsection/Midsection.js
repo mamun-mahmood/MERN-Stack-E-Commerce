@@ -22,7 +22,7 @@ export default function Midsection() {
         maiores praesentium autem rem perferendis exercitationem accusamus,
         obcaecati sapiente nostrum corporis atque ex?
       </p>
-      <div className="container-fluid why_us_bottom pb-4">
+      <div className="container why_us_bottom pb-4">
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <img style={{ width: "60px" }} src={Handshake} alt="" />

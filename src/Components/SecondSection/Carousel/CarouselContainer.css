@@ -6,12 +6,21 @@
   flex: 1;
   height: 60vh;
 }
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .carousel_container {
     height: 40vh;
   }
   .carousel_img {
     height: 40vh;
+    overflow: hidden;
+  }
+}
+@media (max-width: 500px) {
+  .carousel_container {
+    height: 30vh;
+  }
+  .carousel_img {
+    height: 30vh;
     overflow: hidden;
   }
 }
