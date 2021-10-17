@@ -74,9 +74,7 @@ export default function OrderDetails() {
                     />
                   </div>
                   <div className="ml-2">
-                    <p>
-                    Nike Air Max Zephyr 111362
-                    </p>
+                    <p>Nike Air Max Zephyr 111362</p>
                     <p>Product Catagory</p>
                   </div>
                 </div>
@@ -100,45 +98,57 @@ export default function OrderDetails() {
             </div>
           </div>
           <div className="container">
-          <div className="row">
-            <div className="col-md-8">
-              <div className="bg-white p-2 mt-2">
-                <p className="m-0">Shipping Address</p>
-                <small>
-                  Name: <span className="p_style">Mamun Mahmood</span>
-                </small><br />
-                <small>
-                  Home: Bangladesh, Dhaka - 1208, Dhanmondi Block-15/A
-                </small><br />
-                <small>Phone: +8801799464821</small>
-              </div>
-              <div className="bg-white p-2 mt-2">
-                <p className="m-0">Billing Address</p>
-                <small>
-                  Name: <span className="p_style">Mamun Mahmood</span>
-                </small><br />
-                <small>
-                  Home: Bangladesh, Dhaka - 1208, Dhanmondi Block-15/A
-                </small><br />
-                <small>Phone: +8801799464821</small>
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="bg-white mt-2 p-2">
-                <p>Total Summary</p>
-              </div>
-              <div className="bg-white mt-2 p-2">
-                <div className="border_bottom">
-                  <p>Sub Total $200</p>
-                  <p>Shipping $5</p>
+            <div className="row">
+              <div className="col-md-8">
+                <div className="bg-white p-2 mt-2">
+                  <p className="m-0">Shipping Address</p>
+                  <small>
+                    Name: <span className="p_style">Mamun Mahmood</span>
+                  </small>
+                  <br />
+                  <small>
+                    Home: Bangladesh, Dhaka - 1208, Dhanmondi Block-15/A
+                  </small>
+                  <br />
+                  <small>Phone: +8801799464821</small>
                 </div>
-                <div style={{display: 'flex', justifyContent: 'space-between'}}> 
-                  <p>Total</p>
-                  <p>$25</p>
+                <div className="bg-white p-2 mt-2">
+                  <p className="m-0">Billing Address</p>
+                  <small>
+                    Name: <span className="p_style">Mamun Mahmood</span>
+                  </small>
+                  <br />
+                  <small>
+                    Home: Bangladesh, Dhaka - 1208, Dhanmondi Block-15/A
+                  </small>
+                  <br />
+                  <small>Phone: +8801799464821</small>
                 </div>
               </div>
+              <div className="col-md-4">
+                <div className="bg-white mt-2 p-2">
+                  <p>Total Summary</p>
+                </div>
+                <div className="bg-white mt-2 p-2">
+                  <div className="border_bottom">
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <p>Sub Total </p>
+                      <p>$200</p>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                      <p>Shipping</p>
+                      <p>$5</p>
+                    </div>
+                  </div>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <p>Total</p>
+                    <p>$25</p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>

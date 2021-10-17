@@ -20,6 +20,8 @@ import PaymentPage from "./Components/PaymentPage/PaymentPage";
 import HelpPage from "./Components/HelpPage/HelpPage";
 import MyOrderPage from "./Components/MyOrderPage/MyOrderPage";
 import OrderDetails from "./Components/OrderDetails/OrderDetails";
+import MyProfile from "./Components/MyProfile/MyProfile";
+import OrderTrack from "./Components/OrderTrack/OrderTrack";
 
 function App() {
   return (
@@ -56,6 +58,12 @@ function App() {
       </Route>
       <Route path="/order_details">
         <OrderDetails/>
+      </Route>
+      <Route path="/my_profile">
+        <MyProfile/>
+      </Route>
+      <Route path="/order_track">
+        <OrderTrack/>
       </Route>
       <Footer />
       <Switch></Switch>

@@ -18,7 +18,7 @@ export default function MyOrderPage() {
               <p className="bg-light m-1 pl-2">Manage My Account</p>
             </div>
             <div className="bg-light  pb-2">
-              <p className="pl-3 box_shadow m-1 p_style">My Profile</p>
+              <Link to="my_profile"><p className="pl-3 box_shadow m-1 p_style">My Profile</p></Link>
               <p className="pl-3 box_shadow m-1 p_style">Addres Book</p>
               <p className="pl-3 box_shadow m-1 p_style">Vouchers</p>
             </div>
