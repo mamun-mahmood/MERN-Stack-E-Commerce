@@ -41,28 +41,28 @@ export default function FlashSell() {
     // }
   }, 1000);
   return (
-    <div className="flash_sell rounded">
-      <div className="top_header container mt-3">
-        <div className="row mt-3">
-          <div className="topheader_items col-lg-3 col-md-6 col-12">
+    <div className="flash_sell rounded mb-5" style={{width: '80%', marginLeft: '10%'}}>
+      <div className="top_header container-fluid mt-3">
+        <div className="row">
+          <div className="topheader_items col-lg-3 col-md-6">
             <ProductionQuantityLimitsOutlinedIcon style={{ color: "red" }} />
             <p>ImpoNexpo Product</p>
           </div>
-          <div className="topheader_items d-flex col-lg-3 col-md-6 col-12">
+          <div className="topheader_items d-flex col-lg-3 col-md-6">
             <HomeRepairServiceOutlinedIcon style={{ color: "blue" }} />
             <p>ImpoNexpo Services</p>
           </div>
-          <div className="topheader_items d-flex col-lg-3 col-md-6 col-12">
+          <div className="topheader_items d-flex col-lg-3 col-md-6">
             <ChromeReaderModeOutlinedIcon style={{ color: "green" }} />
             <p>ImpoNexpo Learning</p>
           </div>
-          <div className="topheader_items d-flex col-lg-3 col-md-6 col-12">
+          <div className="topheader_items d-flex col-lg-3 col-md-6">
             <LiveTvOutlinedIcon style={{ color: "purple" }} />
             <p>ImpoNexpo TV Chanel</p>
           </div>
         </div>
       </div>
-      <div className="flash_sale_section  container-fluid rounded">
+      <div className="flash_sale_section rounded container-fluid">
         <div className="mt-5">
           <h4>FLASH SALE</h4>
         </div>

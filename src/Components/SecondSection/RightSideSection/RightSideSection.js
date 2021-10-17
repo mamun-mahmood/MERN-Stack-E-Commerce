@@ -3,7 +3,7 @@ import "./RightSideSection.css";
 
 export default function RightSideSection() {
   return (
-    <div className="right_side_section container h-100">
+    <div className="right_side_section container h-100 mt-5">
       <h5 className="text-primary" style={{ textAlign: "center" }}>
         One request, Multiple Quotes
       </h5>

@@ -8,7 +8,7 @@ export default function CarouselContailer() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel_img"
-            src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/eehabecsfly0wy1pxxve/air-max-270-older-shoe-9KTdjGPz.png"
+            src="https://cdn3.mageplaza.com/media/general/MImGnKu.png"
             alt="First slide"
           />
           <Carousel.Caption>
@@ -20,7 +20,7 @@ export default function CarouselContailer() {
         <Carousel.Item>
           <img
             className="d-block w-100 carousel_img"
-            src="https://photos.queens.cz/queens/2021-04/large/nike-air-max-zephyr-111362_1.jpg"
+            src="https://www.mconnectmedia.com/blog/wp-content/uploads/2017/11/holiday-saving-offer-1-800x400.jpg"
             alt="Second slide"
           />
 

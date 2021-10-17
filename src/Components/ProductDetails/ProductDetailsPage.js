@@ -222,7 +222,7 @@ export default function ProductDetailsPage() {
                 style={{ backgroundColor: "#f57224", marginRight: "10px" }}
                 variant="contained"
               >
-                Add to Cart
+                Groop Buy
               </Button>
             </div>
           </div>

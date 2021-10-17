@@ -8,11 +8,11 @@
 }
 .topheader_items {
     display: flex;
-    height: 35px;
+    height: 50px;
     margin-top: 50px;
     background-color: white;
     border-radius: 20px;
-    padding:  5px 20px;
+    padding:  12px 20px;
 }
 .topheader_items:hover {
     cursor: pointer;

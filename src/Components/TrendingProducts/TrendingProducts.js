@@ -1,6 +1,7 @@
 import React from "react";
 import "./TrendingProducts.css";
 import ProductCard from "./ProductCard";
+import ProductCardCustom from "../ProductCardCustom/ProductCardCustom";
 export default function TrendingProducts() {
   return (
     <div>
@@ -10,6 +11,9 @@ export default function TrendingProducts() {
       <div className="trending_products container">
         <div className="row">
           <div className="col-md-6 col-12  col-lg-3 mb-4">
+            <ProductCardCustom/>
+          </div>
+          {/* <div className="col-md-6 col-12  col-lg-3 mb-4">
             <ProductCard />
           </div>
           <div className="col-md-6 col-12  col-lg-3 mb-4">
@@ -20,10 +24,7 @@ export default function TrendingProducts() {
           </div>
           <div className="col-md-6 col-12  col-lg-3 mb-4">
             <ProductCard />
-          </div>
-          <div className="col-md-6 col-12  col-lg-3 mb-4">
-            <ProductCard />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
