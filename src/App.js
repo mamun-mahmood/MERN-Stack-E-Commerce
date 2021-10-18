@@ -20,6 +20,8 @@ import MyOrderPage from "./Components/MyOrderPage/MyOrderPage";
 import OrderDetails from "./Components/OrderDetails/OrderDetails";
 import MyProfile from "./Components/MyProfile/MyProfile";
 import OrderTrack from "./Components/OrderTrack/OrderTrack";
+import ProductCategory from "./Components/ProductCategory/ProductCategory";
+import BottomBanner from "./Components/BottomBanner/BottomBanner";
 
 function App() {
   return (
@@ -33,7 +35,9 @@ function App() {
         <TrendingProducts />
         <TrendingService />
         <TrendingLiveStream />
-        <ServiceCategory />
+        <BottomBanner/>
+        <ProductCategory/>
+        {/* <ServiceCategory /> */}
         <Testimonial />
       </Route>
       <Route path="/signInuserPage">

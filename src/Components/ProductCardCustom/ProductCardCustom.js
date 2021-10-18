@@ -70,7 +70,7 @@ export default function ProductCardCustom({Thumbnail1}) {
         className=""
         style={{ display: "flex", justifyContent: "space-around" }}
       >
-        <button className="btn btn-outline-primary">Min Order</button>
+        <button className="btn" style={{backgroundColor: '#fe842f', color: 'white'}}>Order Now</button>
         <button
           className="btn"
           style={{ color: "white", backgroundColor: "#326dcb" }}

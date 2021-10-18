@@ -11,7 +11,10 @@ export default function Testimonial() {
     { width: 1600, itemsToShow: 5 },
   ];
   return (
-    <div className="container">
+    <div className="container-fluid">
+      <div className="trending_header">
+        <p>Testimonial</p>
+      </div>
       <Carousel breakPoints={breakPoints}>
           <div><TestimonialCard/></div>
           <div><TestimonialCard/></div>

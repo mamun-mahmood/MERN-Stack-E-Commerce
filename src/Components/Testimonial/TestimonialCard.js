@@ -1,15 +1,17 @@
 import React from "react";
 import { Avatar, Rating } from "@mui/material";
-import { height } from "@mui/system";
+
 export default function TestimonialCard() {
   return (
-    <div className="bg-white testimonial mr-2" style={{ height: "300px" }}>
+    <div className="bg-light testimonial mr-2 mb-1" style={{ height: "300px", borderRadius: '20px', boxShadow: '1px 1px 1px 1px rgba(0,0,0,0.71)' }}>
       <div
         className="p-2 pb-0 mb-2 testimonial_top"
         style={{
           textAlign: "center",
           backgroundColor: "#1d5dc7",
           height: "67%",
+          borderTopLeftRadius: '20px',
+          borderTopRightRadius: '20px',
         }}
       >
         <h6 style={{ color: "white", fontSize: "20px" }}>Testimonial</h6>

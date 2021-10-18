@@ -1,0 +1,30 @@
+.left_section {
+  background-color: rgb(184,112,7);
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  opacity: 0.8;
+}
+.right_section {
+    background-color: rgb(184,112,7);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  opacity: 0.8;
+}
+.element_style {
+  margin-left: 20px;
+  margin-top: 10px;
+  color: white;
+  font-weight: 580;
+  border-bottom: 1px solid rgb(187, 182, 182);
+}
+.element_style:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.first_option:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.hide_scrollBar::-webkit-scrollbar {
+  display: none;
+}
