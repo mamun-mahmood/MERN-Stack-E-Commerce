@@ -18,7 +18,7 @@ export default function TrendingProducts() {
       </div>
       <div
         className="trending_products"
-        style={{ width: "70%", marginLeft: "15%" }}
+        style={{ width: "98%", marginLeft: "1%" }}
       >
         <Carousel breakPoints={breakPoints}>
           <div className="mb-4">

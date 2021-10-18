@@ -12,9 +12,8 @@ export default function CarouselContailer() {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            <button className="btn btn-outline-primary">Shop Now</button>
+            
+            {/* <button className="btn btn-outline-primary">Shop Now</button> */}
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -25,9 +24,8 @@ export default function CarouselContailer() {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <button className="btn btn-outline-primary">Shop Now</button>
+            
+            {/* <button className="btn btn-primary">Shop Now</button> */}
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

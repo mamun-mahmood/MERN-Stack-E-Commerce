@@ -16,7 +16,7 @@ export default function TrendingService() {
       <div className="trending_header">
         <p>trending services on imponexpo</p>
       </div>
-      <div className="trending_products" style={{width: '70%', marginLeft: '15%'}}>
+      <div className="trending_products" style={{ width: "98%", marginLeft: "1%" }}>
         <Carousel breakPoints={breakPoints}>
           <div className="mb-4">
             <ProductCardCustom Thumbnail1={Thumbnail1} />
