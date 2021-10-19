@@ -33,9 +33,9 @@ export default function MyProfile() {
         <div className="col-md-9 bg-white ml-md-4 p-5 box_shadow">
           <div>
             <form action="">
-              <div className="container">
+              <div className="container-fluid">
                 <div className="row">
-                  <div className="col-md-4 mb-5">
+                  <div className="col-md-3 mr-1 mb-5">
                     <p className="m-0">Full Name</p>
                     <input
                       className="input_style"
@@ -51,7 +51,7 @@ export default function MyProfile() {
                       placeholder="ma******@gmail.com"
                     />
                   </div>
-                  <div className="col-md-4 mb-5">
+                  <div className="col-md-3 mb-5">
                     <p className="m-0">Mobile</p>
                     <input
                       className="input_style"
