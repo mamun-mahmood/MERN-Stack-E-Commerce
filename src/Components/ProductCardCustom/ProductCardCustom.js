@@ -4,6 +4,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from "@mui/icons-material/Share";
 import ChatIcon from "@mui/icons-material/Chat";
 import { Avatar } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export default function ProductCardCustom({Thumbnail1}) {
   console.log(Thumbnail1);
@@ -49,10 +50,10 @@ export default function ProductCardCustom({Thumbnail1}) {
               <p className="m-0 mt-2 ml-2 text-white">Mamun Mahmood</p>
             </div>
             <div className="ml-1">
-              <p className="m-0">
+              <Link to="/product_details" style={{textDecoration: 'none', color: 'white'}}><p className="m-0">
                 __ Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 lorem20
-              </p>
+              </p></Link>
               <p className="0">#sneakers #supersneaker #run</p>
             </div>
           </div>

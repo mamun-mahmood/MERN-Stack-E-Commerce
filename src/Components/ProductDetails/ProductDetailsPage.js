@@ -75,15 +75,12 @@ export default function ProductDetailsPage() {
                   className="product_img"
                   src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/eehabecsfly0wy1pxxve/air-max-270-older-shoe-9KTdjGPz.png"
                 />
-                <p className="legend">Nike Air Jordan</p>
               </div>
               <div>
                 <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/35adc820-f65a-4b6e-85cb-49447468336f/air-max-zephyr-shoe-zX5mZP.png" />
-                <p className="legend">Nike Air Jordan</p>
               </div>
               <div>
                 <img src="https://photos.queens.cz/queens/2021-04/large/nike-air-max-zephyr-111362_1.jpg" />
-                <p className="legend">Nike Air Jordan</p>
               </div>
             </Carousel>
           </div>
@@ -329,8 +326,8 @@ export default function ProductDetailsPage() {
         </div>
       </div>
       <div className="ml-5">
-        <Button 
-        onClick={() => setCompanyDetails(true)}
+        <Button
+          onClick={() => setCompanyDetails(true)}
           style={{
             marginRight: "5px",
             backgroundColor: "#346ccd",
@@ -341,7 +338,7 @@ export default function ProductDetailsPage() {
           Product Details
         </Button>
         <Button
-        onClick={() => setCompanyDetails(false)}
+          onClick={() => setCompanyDetails(false)}
           style={{
             backgroundColor: "#d0d0d0",
             color: "grey",
