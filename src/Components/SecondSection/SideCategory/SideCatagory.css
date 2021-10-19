@@ -28,7 +28,6 @@
   margin-left: 30px;
 }
 .each_category:hover {
-  border-radius: 5px;
   cursor: pointer;
   background-color: #f9f9f9;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);

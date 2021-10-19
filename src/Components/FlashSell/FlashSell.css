@@ -4,7 +4,7 @@
     border-radius: 20px;
 }
 .top_header {
-    width: 100%;
+    /* width: 100%; */
 }
 .topheader_items {
     display: flex;
@@ -25,14 +25,17 @@
     color: orange;
 }
 .flash_sale_container{
-    background-image: url(../../Resources/flash\ banner.jpg);
-    background-size: contain;
-    height: 200px;
     width: 100%;
-    border: 1px solid black;
 }
 @media (max-width: 1000px) {
     .flash_sale-right {
         display: none;
     }
 }
+.blinking_border {
+    border: 2px solid;
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blink { 50% { border-color: #ff0000; }  }

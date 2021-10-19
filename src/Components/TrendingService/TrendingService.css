@@ -1,0 +1,6 @@
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+.rec.rec-arrow {
+    width: 40px;
+}
