@@ -9,7 +9,7 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 
 export default function VideoPlayerCard() {
   return (
-    <div className="col-md-4 col-12 col-lg-2 mb-4 round bg-white p-2">
+    <div className="col-md-4 col-12 col-lg-3 mb-4 round bg-white p-2">
       <div className="bg-light p-1">
         <div>
           <div
@@ -23,12 +23,12 @@ export default function VideoPlayerCard() {
               <Avatar />
               <div className=" ml-2 text-white">
                 <p className="m-0 text-dark">Mamun Mahmood</p>
-                <small className="m-0 text-white">1.4k Followers</small>
+                <small className="m-0 text-secondary">1.4k Followers</small>
               </div>
             </div>
             <div>
               <div style={{ display: "flex", alignItems: "center" }}>
-                <AddBoxIcon className="icon_white" />
+                <AddBoxIcon className="icon_white" style={{color: 'red'}} />
                 <small>Follow</small>
               </div>
             </div>
