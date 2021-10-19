@@ -23,10 +23,12 @@ import OrderTrack from "./Components/OrderTrack/OrderTrack";
 import ProductCategory from "./Components/ProductCategory/ProductCategory";
 import BottomBanner from "./Components/BottomBanner/BottomBanner";
 import SourceByRegion from "./Components/SourceByRegion/SourceByRegion";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <Header /> {/* TopBanner Header and secondBanner */}
       <Route exact path="/">
         <Secondbar/>
