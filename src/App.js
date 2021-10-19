@@ -22,6 +22,7 @@ import MyProfile from "./Components/MyProfile/MyProfile";
 import OrderTrack from "./Components/OrderTrack/OrderTrack";
 import ProductCategory from "./Components/ProductCategory/ProductCategory";
 import BottomBanner from "./Components/BottomBanner/BottomBanner";
+import SourceByRegion from "./Components/SourceByRegion/SourceByRegion";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <ProductCategory/>
         {/* <ServiceCategory /> */}
         <Testimonial />
+        <SourceByRegion/>
       </Route>
       <Route path="/signInuserPage">
         <SignUp />
