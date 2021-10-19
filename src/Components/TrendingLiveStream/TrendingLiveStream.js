@@ -15,8 +15,6 @@ export default function TrendingLiveStream() {
           <VideoPlayerCard/>
           <VideoPlayerCard/>
           <VideoPlayerCard/>
-          <VideoPlayerCard/>
-          <VideoPlayerCard/>
         </div>
       </div>
     </div>
