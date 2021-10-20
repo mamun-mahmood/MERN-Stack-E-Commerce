@@ -1,11 +1,19 @@
 .left_section {
-  background-color: rgb(184,112,7);
+  background: linear-gradient(
+    0deg,
+    rgba(17, 14, 12, 1) 0%,
+    rgba(182, 113, 12, 0.7731481481481481) 100%
+  );
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
   opacity: 0.8;
 }
 .right_section {
-    background-color: rgb(184,112,7);
+  background: linear-gradient(
+    0deg,
+    rgba(17, 14, 12, 1) 0%,
+    rgba(182, 113, 12, 0.7731481481481481) 100%
+  );
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
   opacity: 0.8;

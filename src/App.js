@@ -28,21 +28,21 @@ import ScrollToTop from "./ScrollToTop";
 function App() {
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <Header /> {/* TopBanner Header and secondBanner */}
       <Route exact path="/">
-        <Secondbar/>
+        <Secondbar />
         <SecondSection />
         <FlashSell />
-        <Midsection /> 
+        <Midsection />
         <TrendingProducts />
         <TrendingService />
         <TrendingLiveStream />
-        <BottomBanner/>
-        <ProductCategory/>
-        {/* <ServiceCategory /> */}
+        <BottomBanner />
+        <ProductCategory />
+        <ServiceCategory />
         <Testimonial />
-        <SourceByRegion/>
+        <SourceByRegion />
       </Route>
       <Route path="/signInuserPage">
         <SignUp />
@@ -51,25 +51,25 @@ function App() {
         <ProductDetailsPage />
       </Route>
       <Route path="/checkout_here">
-        <CheckoutPage/>
+        <CheckoutPage />
       </Route>
       <Route path="/payment_Page">
-        <PaymentPage/>
+        <PaymentPage />
       </Route>
       <Route path="/help_page">
-        <HelpPage/>
+        <HelpPage />
       </Route>
       <Route path="/my_orders">
-        <MyOrderPage/>
+        <MyOrderPage />
       </Route>
       <Route path="/order_details">
-        <OrderDetails/>
+        <OrderDetails />
       </Route>
       <Route path="/my_profile">
-        <MyProfile/>
+        <MyProfile />
       </Route>
       <Route path="/order_track">
-        <OrderTrack/>
+        <OrderTrack />
       </Route>
       <Footer />
       <Switch></Switch>

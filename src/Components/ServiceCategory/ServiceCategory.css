@@ -1,0 +1,10 @@
+.left_section2 {
+  background: linear-gradient(
+    0deg,
+    rgba(13, 13, 22, 0.7708333333333334) 0%,
+    rgba(23, 20, 153, 1) 100%
+  );
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  opacity: 0.8;
+}

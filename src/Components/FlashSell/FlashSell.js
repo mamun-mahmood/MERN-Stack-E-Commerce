@@ -19,12 +19,7 @@ const breakPoints = [
 export default function FlashSell() {
   let date = 5;
   const countDownDate = new Date(`Dec ${date}, 2021 15:37:25`).getTime();
-
   // Update the count down every 1 second
-  let fdays = 1;
-  let fhours = 0;
-  let fminutes = 0;
-  let fseconds = 0;
   const x = setInterval(function () {
     // Get today's date and time
     const now = new Date().getTime();
@@ -41,10 +36,10 @@ export default function FlashSell() {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Output the result in an element with id="demo"
-    document.getElementById("days").innerText = days;
-    document.getElementById("hours").innerText = hours;
-    document.getElementById("minutes").innerText = minutes;
-    document.getElementById("seconds").innerText = seconds;
+    // document.getElementById("days").innerText = days;
+    // document.getElementById("hours").innerText = hours;
+    // document.getElementById("minutes").innerText = minutes;
+    // document.getElementById("seconds").innerText = seconds;
 
     if (distance < 0) {
       clearInterval(x);
@@ -96,7 +91,9 @@ export default function FlashSell() {
                   padding: "6px",
                   borderRadius: "5px",
                 }}
-              >null</span>
+              >
+                00
+              </span>
               :
               <span
                 id="hours"
@@ -106,7 +103,7 @@ export default function FlashSell() {
                   borderRadius: "5px",
                 }}
               >
-                {fhours}
+                00
               </span>
               :
               <span

@@ -1,4 +1,5 @@
 import React from "react";
+import './ServiceCategory.css'
 import CarouImg from "../../Resources/burgess-milner-OYYE4g-I5ZQ-uns_bu.png";
 import { Carousel } from "react-bootstrap";
 import ContentImg22 from "../../Resources/jason-leung-jWU9FpLW7fI-unspla_bvt@2x.png";
@@ -12,7 +13,7 @@ export default function ServiceCategory() {
       <div className="container bg-light pb-2" style={{ borderRadius: "20px" }}>
         <div className="row">
           <div className="col-md-3 bg- p-2 ">
-            <div className="left_section pt-5 h-100">
+            <div className="left_section2 pt-5 h-100">
               <div className="">
                 <p
                   className="first_option ml-3 pl-3 pt-2 pb-2 bg-white"
@@ -51,17 +52,10 @@ export default function ServiceCategory() {
           </div>
           <div
             className="col-md-5 mt-3"
-            style={
-              {
-                // display: "flex",
-                // justifyContent: "center",
-                // alignItems: "center",
-              }
-            }
           >
             <div className="">
-              <div className="row">
-                <div className="col-md-12">
+              <div className="row" style={{display: "flex", justifyContent: 'center'}}>
+                <div className="col-md-12 ml-3">
                   <Carousel>
                     <Carousel.Item>
                       <img src={CarouImg} alt="" />
