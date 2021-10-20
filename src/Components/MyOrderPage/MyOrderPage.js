@@ -10,7 +10,7 @@ export default function MyOrderPage() {
       </p>
       <div className="container">
         <div className="row">
-          <div className="left_section col-md-2 col-12 w-100 bg-white p-0 round p-2">
+          <div className=" col-md-2 col-12 w-100 bg-white p-0 round p-2">
             <div className="border_bottom">
               <p className="bg-secondary pl-2 box_shadow m-1 text-white">
                 Hello

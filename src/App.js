@@ -34,7 +34,7 @@ function App() {
         <Secondbar />
         <SecondSection />
         <FlashSell />
-        <Midsection />
+        {/* <Midsection /> */}
         <TrendingProducts />
         <TrendingService />
         <TrendingLiveStream />

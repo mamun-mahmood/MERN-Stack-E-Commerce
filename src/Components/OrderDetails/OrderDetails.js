@@ -1,21 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function OrderDetails() {
   return (
     <div className="container">
       <div className="row">
-        <div className="left_section col-md-2 col-12 w-100 bg-white p-0 round p-2">
+        <div className=" col-md-2 col-12 w-100 bg-white p-0 round p-2">
           <div className="border_bottom">
             <p className="bg-secondary pl-2 box_shadow m-1 text-white">Hello</p>
             <p className="bg-light m-1 pl-2">Manage My Account</p>
           </div>
           <div className="bg-light  pb-2">
-            <p className="pl-3 box_shadow m-1 p_style">My Profile</p>
+          <Link to="my_profile"><p className="pl-3 box_shadow m-1 p_style">My Profile</p></Link>
             <p className="pl-3 box_shadow m-1 p_style">Addres Book</p>
             <p className="pl-3 box_shadow m-1 p_style">Vouchers</p>
           </div>
           <div className="bg-light">
-            <p className="p_style border_bottom m-0 mt-2 pl-3">My Orders</p>
+            <Link to="/my_orders">
+              <p className="p_style border_bottom m-0 mt-2 pl-3">My Orders</p>
+            </Link>
             <p className="p_style pl-3 m-0">My Returns</p>
             <p className="p_style border_bottom pb-2 pl-3">My Cancellations</p>
           </div>
@@ -131,11 +134,21 @@ export default function OrderDetails() {
                 </div>
                 <div className="bg-white mt-2 p-2">
                   <div className="border_bottom">
-                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
                       <p>Sub Total </p>
                       <p>$200</p>
                     </div>
-                    <div style={{ display: "flex", justifyContent: "space-between" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                      }}
+                    >
                       <p>Shipping</p>
                       <p>$5</p>
                     </div>

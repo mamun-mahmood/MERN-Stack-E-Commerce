@@ -7,7 +7,7 @@ export default function MyProfile() {
   return (
     <div className="container">
       <div className="row">
-        <div className="left_section col-md-2 bg-white p-0 round">
+        <div className="col-md-2 bg-white p-0 round">
           <div className="border_bottom">
             <p className="bg-secondary pl-2 box_shadow m-1 text-white">Hello</p>
             <p className="bg-light m-1 pl-2">Manage My Account</p>
@@ -33,9 +33,9 @@ export default function MyProfile() {
         <div className="col-md-9 bg-white ml-md-4 p-5 box_shadow">
           <div>
             <form action="">
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-md-3 mr-1 mb-5">
+              <div className="container">
+                <div className="row w-100">
+                  <div className="col-md-6 mb-5">
                     <p className="m-0">Full Name</p>
                     <input
                       className="input_style"
@@ -43,7 +43,7 @@ export default function MyProfile() {
                       type="text"
                     />
                   </div>
-                  <div className="col-md-4 mb-5">
+                  <div className="col-md-6 mb-5">
                     <p className="m-0">Email Address</p>
                     <input
                       className="input_style"
@@ -51,7 +51,7 @@ export default function MyProfile() {
                       placeholder="ma******@gmail.com"
                     />
                   </div>
-                  <div className="col-md-3 mb-5">
+                  <div className="col-md-12 mb-5">
                     <p className="m-0">Mobile</p>
                     <input
                       className="input_style"

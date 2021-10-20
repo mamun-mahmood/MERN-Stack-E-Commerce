@@ -4,7 +4,7 @@ export default function OrderTrack() {
   return (
     <div className="container">
       <div className="row">
-        <div className="left_section col-md-3 col-12 w-100 bg-white p-0 round">
+        <div className=" col-md-3 col-12 w-100 bg-white p-0 round">
           <div className="border_bottom">
             <p className="bg-secondary pl-2 pt-1 box_shadow m-1 text-white">
               Order Details
