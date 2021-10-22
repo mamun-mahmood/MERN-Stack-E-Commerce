@@ -58,7 +58,7 @@ const customStyles = {
     return {
       ...defaultStyles,
       color: "black",
-      fontSize: "11px",
+      fontSize: '11px'
     };
   },
 };
@@ -78,83 +78,81 @@ export default function NavbarContainer() {
   };
   return (
     <div className="navbar_container container-fluid bg-light pl-2 pr-2">
-      <div className="navbar_inner">
-        <Link to="/">
-          <img className="navLogo" src={CompanyLogo} alt="image" />
-        </Link>
-        <div className="search_field">
-          <SelectDD
-            className="ml-3"
-            labelId="demo-simple-select-filled-label"
-            id="demo-simple-select-filled"
-            value={age}
-            onChange={handleChange}
-            style={{ color: "white" }}
-          >
-            <MenuItem value="All">ALL</MenuItem>
-            <MenuItem value={10}>Product</MenuItem>
-            <MenuItem value={20}>Services</MenuItem>
-            <MenuItem value={30}>Learning</MenuItem>
-          </SelectDD>
-          <div style={{ width: "65%" }}>
-            <Select
-              styles={customStyles}
-              placeholder="ImpoNexpo your Products/Services here"
-              options={aquaticCreatures}
-              components={{
-                DropdownIndicator: () => null,
-                IndicatorSeparator: () => null,
+      <Link to="/">
+        <img className="navLogo" src={CompanyLogo} alt="image" />
+      </Link>
+      <div className="search_field">
+        <SelectDD
+          className="ml-3"
+          labelId="demo-simple-select-filled-label"
+          id="demo-simple-select-filled"
+          value={age}
+          onChange={handleChange}
+          style={{ color: "white" }}
+        >
+          <MenuItem value="All">ALL</MenuItem>
+          <MenuItem value={10}>Product</MenuItem>
+          <MenuItem value={20}>Services</MenuItem>
+          <MenuItem value={30}>Learning</MenuItem>
+        </SelectDD>
+        <div style={{ width: "65%" }}>
+          <Select
+            styles={customStyles}
+            placeholder="ImpoNexpo your Products/Services here"
+            options={aquaticCreatures}
+            components={{
+              DropdownIndicator: () => null,
+              IndicatorSeparator: () => null,
+            }}
+          />
+        </div>
+
+        <div>
+          <p>
+            <CameraAltIcon
+              style={{
+                width: "25px",
+                height: "35px",
+                color: "white",
               }}
             />
-          </div>
-
-          <div>
-            <p>
-              <CameraAltIcon
-                style={{
-                  width: "25px",
-                  height: "35px",
-                  color: "white",
-                }}
-              />
-            </p>
-          </div>
-          <div>
-            <p>
-              <SearchOutlinedIcon
-                style={{
-                  marginTop: "2px",
-                  width: "30px",
-                  height: "35px",
-                  color: "white",
-                  borderLeft: "1px solid grey",
-                }}
-              />
-            </p>
-          </div>
-        </div>
-        <div className="nav_right_items">
-          <MailOutlineIcon className="nav_icons" />
-          <p>My Inbox</p>
-        </div>
-        <div className="nav_right_items">
-          <DashboardCustomizeIcon className="nav_icons" />
-          <p style={{ textDecoration: "none" }}>
-            <Link to="my_orders">My Order</Link>
           </p>
         </div>
-        <div className="nav_right_items">
-          <AddShoppingCartIcon className="nav_icons" />
-          <p>My Cart</p>
+        <div>
+          <p>
+            <SearchOutlinedIcon
+              style={{
+                marginTop: '2px',
+                width: "30px",
+                height: "35px",
+                color: "white",
+                borderLeft: "1px solid grey",
+              }}
+            />
+          </p>
         </div>
-        <div className="nav_right_items">
-          <NotificationsIcon className="nav_icons" />
-          <p>Notification</p>
-        </div>
-        <div className="nav_right_items">
-          <Avatar className="avatar" />
-          <p>My Imponexpo</p>
-        </div>
+      </div>
+      <div className="nav_right_items">
+        <MailOutlineIcon className="nav_icons" />
+        <p>My Inbox</p>
+      </div>
+      <div className="nav_right_items">
+        <DashboardCustomizeIcon className="nav_icons" />
+        <p style={{ textDecoration: "none" }}>
+          <Link to="my_orders">My Order</Link>
+        </p>
+      </div>
+      <div className="nav_right_items">
+        <AddShoppingCartIcon className="nav_icons" />
+        <p>My Cart</p>
+      </div>
+      <div className="nav_right_items">
+        <NotificationsIcon className="nav_icons" />
+        <p>Notification</p>
+      </div>
+      <div className="nav_right_items">
+        <Avatar className="avatar" />
+        <p>My Imponexpo</p>
       </div>
     </div>
   );
