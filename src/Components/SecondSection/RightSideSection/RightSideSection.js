@@ -3,17 +3,17 @@ import "./RightSideSection.css";
 
 export default function RightSideSection() {
   return (
-    <div className="right_side_section container h-100 mt-5">
+    <div className="right_side_section container mt-2">
       <h5 className="text-primary" style={{ textAlign: "center" }}>
         One request, Multiple Quotes
       </h5>
       <p>
-        Lorem ipsum dolor, sit amdipisci est
-        aliquid in ipsa ut quis enesciunt! Deserunt!
+        Lorem ipsum dolor, sit amdipisci est aliquid in ipsa ut quis enesciunt!
+        Deserunt!
       </p>
       <form action="">
         <input
-          style={{ borderRadius: "20px", padding: "10px", width: '100%' }}
+          style={{ borderRadius: "20px", padding: "10px", width: "416px" }}
           type="text"
           name=""
           id=""

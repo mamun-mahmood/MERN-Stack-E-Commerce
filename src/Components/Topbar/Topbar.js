@@ -3,7 +3,7 @@ import React from 'react'
 export default function Topbar() {
     return (
         <div>
-            <div className="bg-secondary" style={{position: 'sticky',display: 'flex', justifyContent: 'space-around'}}>
+            <div className="bg-dark pt-2" style={{position: 'sticky',display: 'flex', justifyContent: 'space-around', color: 'white', alignItems: 'center'}}>
                 <p>Dropshipping</p>
                 <p>Trader Shows</p>
                 <p>Help</p>

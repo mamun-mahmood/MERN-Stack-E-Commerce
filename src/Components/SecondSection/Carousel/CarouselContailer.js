@@ -4,7 +4,7 @@ import { Carousel } from "react-bootstrap";
 export default function CarouselContailer() {
   return (
     <div className="carousel_container">
-      <Carousel>
+      <Carousel controls={false} indicators={false}>
         <Carousel.Item>
           <img
             className="d-block w-100 carousel_img"

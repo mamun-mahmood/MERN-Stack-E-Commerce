@@ -11,8 +11,12 @@ import Language from "../../Resources/translator-language-pngrepo-com.png";
 
 export default function Midsection() {
   return (
-    <div className="mid_section">
-      <div className="why_use ">
+    <div className="mid_section bg-white">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="left_border"></div>
+        <div className="right_border"></div>
+      </div>
+      <div className="trending_header">
         <p>why use imponexpo</p>
       </div>
       <p className="mb-3 p-3" style={{ width: "50%", marginLeft: "25%" }}>
