@@ -63,6 +63,7 @@ export default function ProductDetailsPage() {
     },
   ];
   const [companyDetails, setCompanyDetails] = useState(true);
+  const [GroupBuy, setGroupBuy] = useState(false);
   return (
     <div className="card">
       <div className="container-fluid p-4">
@@ -205,22 +206,66 @@ export default function ProductDetailsPage() {
             </div>
             <div
               className="btn_group"
-              style={{ display: "flex", justifyContent: "space-between" }}
+              style={{ display: "flex", justifyContent: "space-around" }}
             >
-              <Button
-                fullWidth
-                style={{ backgroundColor: "#346ccd", marginRight: "10px" }}
-                variant="contained"
-              >
-                Buy Now
-              </Button>
-              <Button
-                fullWidth
-                style={{ backgroundColor: "#f57224", marginRight: "10px" }}
-                variant="contained"
-              >
-                Groop Buy
-              </Button>
+              <div className="w-100">
+                <Button
+                  fullWidth
+                  style={{ backgroundColor: "#346ccd", marginRight: "10px" }}
+                  variant="contained"
+                >
+                  Buy Now
+                </Button>
+              </div>
+              <div className="w-100">
+                <Button
+                  fullWidth
+                  style={{ backgroundColor: "#f57224", marginRight: "10px" }}
+                  variant="contained"
+                  onClick={() => setGroupBuy(!GroupBuy)}
+                >
+                  Group Buy
+                </Button>
+                <div className="bg-light p-1" style={{display: `${GroupBuy ? 'block' : 'none'} `}}>
+                  <div style={{ width: "100%", display: 'flex'}}>
+                    <div style={{ display: "flex" }}>
+                      <p className="quantity_control">
+                        <Remove />
+                      </p>
+                      <p>
+                        <input
+                          className="form-control"
+                          style={{
+                            textAlign: "center",
+                          }}
+                          value={10}
+                          type="text"
+                        />
+                      </p>
+                      <p className="quantity_control">
+                        <ControlPointIcon />
+                      </p>
+                    </div>
+                    <div>
+                      <p>
+                        <input
+                          className="form-control"
+                          style={{
+                            textAlign: "center",
+                          }}
+                          value={"$100"}
+                          type="text"
+                        />
+                      </p>
+                    </div>
+                  </div>
+                  <small className="m-0 p-0">For group buy, minimum order quantity is 10.</small>
+                  <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                    <Button fullWidth style={{textTransform: 'capitalize', color: 'white', background: 'grey', margin: '1px', height: '40px', fontSize: '10px'}}>Initial Group Order</Button>
+                    <Button fullWidth style={{textTransform: 'capitalize', color: 'white', background: 'grey', margin: '1px', height: '40px', fontSize: '10px'}}>Join Existing</Button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div className="rigt_side_section col-md-3 bg-light h-100">
@@ -254,7 +299,7 @@ export default function ProductDetailsPage() {
                 }}
               >
                 <p style={{ width: "30px", opacity: "60%" }}>
-                  <img src={ReturnIcon} alt="" />
+                  <img src={ReturnIcon} alt="image" />
                 </p>
                 <p className="mt-1">7 Days Easy Returns</p>
               </div>
@@ -541,7 +586,7 @@ export default function ProductDetailsPage() {
                           className="ml-2"
                           style={{ width: "30px", height: "22px" }}
                           src="data:image/png;base64,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"
-                          alt=""
+                          alt="image"
                         />
                         <small className="ml-2">America</small>
                       </div>
@@ -572,7 +617,7 @@ export default function ProductDetailsPage() {
                           className="ml-2"
                           style={{ width: "30px", height: "22px" }}
                           src="data:image/png;base64,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"
-                          alt=""
+                          alt="image"
                         />
                         <small className="ml-2">America</small>
                       </div>

@@ -5,7 +5,7 @@ import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined
 import { Link } from "react-router-dom";
 export default function Secondbar() {
   return (
-    <div className="second_bar">
+    <div className="second_bar container-fluid">
       <div className="second_bar_left">
         <MenuOutlinedIcon />
         <p>Categories</p>

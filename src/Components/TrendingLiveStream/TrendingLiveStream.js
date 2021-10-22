@@ -3,7 +3,11 @@ import VideoPlayerCard from "./VideoPlayerCard";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function TrendingLiveStream() {
   return (
-    <div className="bg-light">
+    <div className="bg-white mt-5 pb-2">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="left_border"></div>
+        <div className="right_border"></div>
+      </div>
       <div className="trending_header">
         <p>trending on imponexpo Livestream</p>
       </div>
@@ -17,9 +21,43 @@ export default function TrendingLiveStream() {
           <VideoPlayerCard />
         </div>
       </div>
-      <div className="p_style" style={{display: 'flex', justifyContent: 'space-around', color: 'white', width: '25%', marginLeft: '37.5%',borderRadius: '10px', padding: '10px 0px', backgroundColor: '#326dcb', marginBottom: '15px'}}>
-        <p className="m-0">Explore More Live Stream</p>
-        <ArrowForwardIosIcon style={{backgroundColor: 'white', color: '#326dcb', borderRadius: '50%', padding: '0px 0px'}}/>
+      <div
+        className="p_style mt-3 box_shadow"
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          color: "white",
+          width: "335px",
+          height: "54px",
+          marginLeft: "37.5%",
+          borderRadius: "30px",
+          backgroundColor: "#326dcb",
+          marginBottom: "15px",
+        }}
+      >
+        <p className="m-0 ml-5" style={{ fontWeight: "600" }}>
+          Explore More Livestream
+        </p>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: "54px",
+            height: "54px",
+            backgroundColor: "white",
+            borderRadius: "50%",
+            padding: "0px 0px",
+          }}
+        >
+          <ArrowForwardIosIcon
+            className=""
+            style={{
+              color: "#326dcb",
+            }}
+          />
+        </div>
       </div>
     </div>
   );

@@ -53,23 +53,29 @@ export default function FlashSell() {
   }, 1000);
   return (
     <div className="flash_sell rounded mb-5">
-      <div style={{ width: "90%", marginLeft: "5%" }}>
-        <div className="top_header container-fluid mt-3">
-          <div className="row">
-            <div className="topheader_items col-lg-3 col-md-6">
-              <ProductionQuantityLimitsOutlinedIcon style={{ color: "red" }} />
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-3">
+            <div className="topheader_items">
+              <p><ProductionQuantityLimitsOutlinedIcon style={{ color: "red", width: '50px', height: '50px'}} /></p>
               <p>ImpoNexpo Product</p>
             </div>
-            <div className="topheader_items d-flex col-lg-3 col-md-6">
-              <HomeRepairServiceOutlinedIcon style={{ color: "blue" }} />
+          </div>
+          <div className="col-md-3">
+            <div className="topheader_items">
+              <p><HomeRepairServiceOutlinedIcon style={{ color: "blue",width: '50px', height: '50px' }} /></p>
               <p>ImpoNexpo Services</p>
             </div>
-            <div className="topheader_items d-flex col-lg-3 col-md-6">
-              <ChromeReaderModeOutlinedIcon style={{ color: "green" }} />
+          </div>
+          <div className="col-md-3">
+            <div className="topheader_items">
+              <p><ChromeReaderModeOutlinedIcon style={{ color: "green",width: '50px', height: '50px' }} /></p>
               <p>ImpoNexpo Learning</p>
             </div>
-            <div className="topheader_items d-flex col-lg-3 col-md-6">
-              <LiveTvOutlinedIcon style={{ color: "purple" }} />
+          </div>
+          <div className="col-md-3">
+            <div className="topheader_items">
+              <p><LiveTvOutlinedIcon style={{ color: "purple",width: '50px', height: '50px' }} /></p>
               <p>ImpoNexpo TV Chanel</p>
             </div>
           </div>

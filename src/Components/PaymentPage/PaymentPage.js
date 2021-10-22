@@ -21,11 +21,11 @@ export default function PaymentPage() {
               Select Payment Method
             </p>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <img className="payment_options" src={Stripe} alt="" />
-              <img className="payment_options" src={Visa} alt="" />
-              <img className="payment_options" src={Payoneer} alt="" />
-              <img className="payment_options" src={MasterCard} alt="" />
-              <img className="payment_options" src={Paypal} alt="" />
+              <img className="payment_options" src={Stripe} alt="image" />
+              <img className="payment_options" src={Visa} alt="image" />
+              <img className="payment_options" src={Payoneer} alt="image" />
+              <img className="payment_options" src={MasterCard} alt="image" />
+              <img className="payment_options" src={Paypal} alt="image" />
             </div>
           </div>
           <div

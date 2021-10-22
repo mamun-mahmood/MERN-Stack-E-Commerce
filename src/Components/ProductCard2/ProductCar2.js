@@ -11,7 +11,7 @@ export default function ProductCar2() {
                 <img
                   className="img"
                   src="https://static.nike.com/a/images/w_960,c_limit,f_auto/eztjfgupmyeql2l85rax/air-jordan-1-banned.jpg"
-                  alt=""
+                  alt="image"
                 />
                 <div className="img-info">
                   <div className="info-inner">

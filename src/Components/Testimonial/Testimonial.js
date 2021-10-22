@@ -11,18 +11,36 @@ export default function Testimonial() {
     { width: 1600, itemsToShow: 5 },
   ];
   return (
-    <div className="container-fluid">
-      <div className="trending_header">
-        <p>Testimonial</p>
+    <div className="mt-5 bg-white section_border_top">
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div className="left_border"></div>
+        <div className="right_border"></div>
       </div>
-      <Carousel breakPoints={breakPoints}>
-          <div><TestimonialCard/></div>
-          <div><TestimonialCard/></div>
-          <div><TestimonialCard/></div>
-          <div><TestimonialCard/></div>
-          <div><TestimonialCard/></div>
-          <div><TestimonialCard/></div>
-      </Carousel>
+      <div className="container-fluid">
+        <div className="trending_header">
+          <p>Testimonial</p>
+        </div>
+        <Carousel breakPoints={breakPoints}>
+          <div>
+            <TestimonialCard />
+          </div>
+          <div>
+            <TestimonialCard />
+          </div>
+          <div>
+            <TestimonialCard />
+          </div>
+          <div>
+            <TestimonialCard />
+          </div>
+          <div>
+            <TestimonialCard />
+          </div>
+          <div>
+            <TestimonialCard />
+          </div>
+        </Carousel>
+      </div>
     </div>
   );
 }

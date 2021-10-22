@@ -35,6 +35,11 @@
   padding-left: 20px;
   transition: background-color 0.4s;
 }
+.search_field::placeholder {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
 .search_field:focus {
   background-color: white;
 }

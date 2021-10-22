@@ -8,10 +8,10 @@ export default function BottomBanner() {
       <div className="container pt-4 pb-2">
         <div className="row ">
           <div className="col-md-6 mb-3">
-            <img src={Banner55} alt="" />
+            <img src={Banner55} alt="image" />
           </div>
           <div className="col-md-6 mb-3">
-            <img src={Banner66} alt="" />
+            <img src={Banner66} alt="image" />
           </div>
         </div>
       </div>

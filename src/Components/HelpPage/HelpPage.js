@@ -34,7 +34,7 @@ export default function HelpPage() {
               boxShadow: "0px 1px 3px 1px rgba(0,0,0,0.63)",
             }}
           >
-            <img style={{ width: "100px" }} src={ShippingIcon} alt="" />
+            <img style={{ width: "100px" }} src={ShippingIcon} alt="image" />
             <p>
               My Oder <br />
               <small>Track Your order.</small>
@@ -96,49 +96,49 @@ export default function HelpPage() {
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={Account} alt="" />
+              <img className="help_page_icon" src={Account} alt="image" />
               <p className='p_style'>Account Management</p>
             </div>
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={Order} alt="" />
+              <img className="help_page_icon" src={Order} alt="image" />
               <p className='p_style'>Order</p>
             </div>
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={Category} alt="" />
+              <img className="help_page_icon" src={Category} alt="image" />
               <p className='p_style'>Category</p>
             </div>
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={Payment} alt="" />
+              <img className="help_page_icon" src={Payment} alt="image" />
               <p className='p_style'>Payments</p>
             </div>
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={ShippingIcon} alt="" />
+              <img className="help_page_icon" src={ShippingIcon} alt="image" />
               <p className='p_style'>Shipping & Delivery</p>
             </div>
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={Return} alt="" />
+              <img className="help_page_icon" src={Return} alt="image" />
               <p className='p_style'>Returns</p>
             </div>
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={Refund} alt="" />
+              <img className="help_page_icon" src={Refund} alt="image" />
               <p className='p_style'>Refunds</p>
             </div>
             <div
               className="bg-white round col-md-3 box_shadow"
             >
-              <img className="help_page_icon" src={Promotion} alt="" />
+              <img className="help_page_icon" src={Promotion} alt="image" />
               <p className='p_style'>Promotions</p>
             </div>
         </div>

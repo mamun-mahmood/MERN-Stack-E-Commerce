@@ -1,7 +1,12 @@
+.section_border_top {
+    margin-top: 20px;
+}
 .trending_header {
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: -25px;
+    margin-bottom: 15px;
 }
 .trending_header p {
     padding: 10px 20px;
@@ -11,4 +16,12 @@
     width: 50%;
     border-radius: 5px;
     color: grey;
+}
+.left_border {
+    border-top: 2px solid grey;
+    width: 20%;
+}
+.right_border {
+    border-top: 2px solid grey;
+    width: 20%;
 }

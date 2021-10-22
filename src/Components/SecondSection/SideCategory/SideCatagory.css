@@ -1,6 +1,6 @@
 .left_side_category {
   flex: 0.33;
-  max-height: 60vh;
+  max-height: 50vh;
   overflow-y: scroll;
 }
 .category_items {
@@ -8,7 +8,7 @@
   place-items: center;
 }
 .side_category_dropdown_item {
-    z-index: 1000;
+  z-index: 1000;
 }
 .dropdown-content_side_category {
   float: right;
@@ -35,6 +35,11 @@
 @media (max-width: 650px) {
   .left_side_category {
     display: none;
+  }
+}
+@media (max-width: 900px) {
+  .left_side_category {
+    height: 40vh;
   }
 }
 @media (max-width: 800px) {

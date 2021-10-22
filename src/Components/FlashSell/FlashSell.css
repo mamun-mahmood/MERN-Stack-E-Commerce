@@ -8,11 +8,13 @@
 }
 .topheader_items {
     display: flex;
-    height: 50px;
-    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    /* height: 68px; */
     background-color: white;
     border-radius: 20px;
-    padding:  12px 20px;
+    padding-top: 20px;
+    margin-bottom: 10px;
 }
 .topheader_items:hover {
     cursor: pointer;

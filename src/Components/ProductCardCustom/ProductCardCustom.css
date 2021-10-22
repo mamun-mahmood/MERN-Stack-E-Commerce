@@ -1,6 +1,11 @@
 .card_main {
   border-radius: 15px;
-  height: 400px;
+  /* height: 400px; */
+  width: 266px;
+  /* height: 433px; */
+}
+.card_main:hover {
+  border: 1px solid grey;
 }
 .card_top {
   border-top-left-radius: 15px;

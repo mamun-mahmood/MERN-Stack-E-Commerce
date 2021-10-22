@@ -16,7 +16,7 @@ export default function ContentSwiper(props) {
       <Carousel breakPoints={breakPoints}>
         {slideData.map((slide) => (
           <div style={{width: '150px'}}>
-            <img src={slide.item} alt="" />
+            <img src={slide.item} alt="image" />
           </div>
         ))}
       </Carousel>

@@ -10,11 +10,11 @@ import CompanyLogo from '../../../Resources/companyLogo.png'
 import { Link } from "react-router-dom";
 export default function NavbarContainer() {
   return (
-    <div className="navbar_container bg-light">
-      <Link to="/"><img className="navLogo" src={CompanyLogo} alt="" /></Link>
+    <div className="navbar_container container-fluid bg-light">
+      <Link to="/"><img className="navLogo" src={CompanyLogo} alt="image" /></Link>
       <form action="">
         {/* <SearchOutlinedIcon/> */}
-        <input className="search_field" type="text" />
+        <input className="search_field" type="text" placeholder="ImpoNexpo Your Products/Services"/>
       </form>
       <div className="nav_right_items">
         <MailOutlineIcon className="nav_icons" />

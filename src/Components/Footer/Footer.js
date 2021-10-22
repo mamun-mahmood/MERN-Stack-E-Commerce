@@ -95,7 +95,7 @@ export default function Footer() {
         <div className="row">
           <div className="col-md-6 col-12 col-lg-3 mt-4">
             <h6>Payment Method</h6>
-            <img className="w-100" src={PaymentImg} alt="" />
+            <img className="w-100" src={PaymentImg} alt="image" />
           </div>
           <div className="col-md-6 col-12 col-lg-3 mt-4 mb-3">
             <h6>Follow Us</h6>
@@ -119,8 +119,8 @@ export default function Footer() {
             style={{ textAlign: "center" }}
           >
             <div className="d-flex">
-              <img className="w-50 p-1 h-75" src={QR} alt="" />
-              <img className="w-50 p-1" src={ImpoNexpoLogo} alt="" />
+              <img className="w-50 p-1 h-75" src={QR} alt="image" />
+              <img className="w-50 p-1" src={ImpoNexpoLogo} alt="image" />
             </div>
             <div className="">
               <p>
@@ -134,8 +134,8 @@ export default function Footer() {
             </div>
           </div>
           <div className="col-md-6 col-12 col-lg-3 mt-5">
-            <img className="w-50 footer_icon" src={Appstore} alt="" />
-            <img className="w-50 footer_icon" src={Playstore} alt="" />
+            <img className="w-50 footer_icon" src={Appstore} alt="image" />
+            <img className="w-50 footer_icon" src={Playstore} alt="image" />
           </div>
         </div>
       </div>

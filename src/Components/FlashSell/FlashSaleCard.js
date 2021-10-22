@@ -13,7 +13,7 @@ export default function FlashSaleCard({ sofa }) {
               justifyContent: "center",
             }}
           >
-            <img className="" style={{ maxHeight: "90%" }} src={sofa} alt="" />
+            <img className="" style={{ maxHeight: "90%" }} src={sofa} alt="image" />
           </div>
           <p className="m-0 pl-2 pr-2">Lorem ipsum dolor sit amet.</p>
           <div

@@ -10,8 +10,8 @@ import AddBoxIcon from "@mui/icons-material/AddBox";
 export default function VideoPlayerCard() {
   return (
     <div className="col-md-4 col-12 col-lg-3 mb-4 round bg-white p-2">
-      <div className="bg-light p-1">
-        <div>
+      <div className="bg-light p-1 box_shadow round">
+        <div className="p-1">
           <div
             style={{
               display: "flex",
@@ -43,13 +43,13 @@ export default function VideoPlayerCard() {
         <p
           style={{
             position: "absolute",
-            top: "60px",
+            top: "68px",
             right: "13px",
             zIndex: "1",
             color: "white",
             backgroundColor: "red",
             padding: "0px 5px",
-            borderRadius: "5px",
+            borderRadius: "15px",
           }}
         >
           Live

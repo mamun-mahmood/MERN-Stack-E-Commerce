@@ -1,10 +1,10 @@
 .carousel_img {
-  height: 60vh;
+  height: 50vh;
   overflow: hidden;
 }
 .carousel_container {
   flex: 1;
-  height: 60vh;
+  height: 50vh;
 }
 @media (max-width: 900px) {
   .carousel_container {

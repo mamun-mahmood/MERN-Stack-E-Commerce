@@ -153,13 +153,13 @@ export default function SignIn() {
                   onClick={signInWithGoogle}
                   style={{ width: "35px", marginRight: "20px" }}
                   src={gLogo}
-                  alt=""
+                  alt="image"
                 />
                 <img
                   // onClick={fbSignIn}
                   style={{ width: "35px" }}
                   src={fbLogo}
-                  alt=""
+                  alt="image"
                 />
               </div>
             </div>

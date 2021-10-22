@@ -25,43 +25,43 @@ export default function Midsection() {
       <div className="container why_us_bottom pb-4">
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ width: "60px" }} src={Handshake} alt="" />
+            <img style={{ width: "60px" }} src={Handshake} alt="image" />
           </div>
           <p>Reliable Merchants</p>
         </div>
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ width: "60px" }} src={PaymentIcon} alt="" />
+            <img style={{ width: "60px" }} src={PaymentIcon} alt="image" />
           </div>
           <p>Secure Payment</p>
         </div>
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ width: "60px" }} src={CustomerService} alt="" />
+            <img style={{ width: "60px" }} src={CustomerService} alt="image" />
           </div>
           <p>Customer Service</p>
         </div>
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ width: "60px" }} src={Diamond} alt="" />
+            <img style={{ width: "60px" }} src={Diamond} alt="image" />
           </div>
           <p>Quality Products</p>
         </div>
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ width: "60px" }} src={Language} alt="" />
+            <img style={{ width: "60px" }} src={Language} alt="image" />
           </div>
           <p>Solving Language Barrier</p>
         </div>
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ width: "60px" }} src={Logistics} alt="" />
+            <img style={{ width: "60px" }} src={Logistics} alt="image" />
           </div>
           <p>Logistics</p>
         </div>
         <div>
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <img style={{ width: "60px" }} src={Localization} alt="" />
+            <img style={{ width: "60px" }} src={Localization} alt="image" />
           </div>
           <p>Localization</p>
         </div>
