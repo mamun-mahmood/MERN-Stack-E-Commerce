@@ -18,33 +18,29 @@
   margin-left: 25%;
   color: grey;
 }
-.nav_right_items > p:hover {
+.anyClassNameWillWork:hover {
   color: orange;
   cursor: pointer;
 }
 .avatar {
   margin-left: 25%;
-  margin-top: 15px;
+  margin-top: 12px;
+  width: 20px;
+  height: 20px;
 }
 .search_field {
   display: flex;
   justify-content: space-between;
   background-color: rgba(50, 109, 203);
-  border-radius: 20px;
+  border: 1px solid red;
+  border-radius: 5px;
   width: 500px;
   border: none;
   height: 45px;
   padding: 4px;
   transition: background-color 0.4s;
 }
-.search_field::placeholder {
-  color: white;
-  font-size: 14px;
-  text-align: center;
-}
-.search_field:focus {
-  background-color: white;
-}
+
 @media (max-width: 1100px) {
   .search_field {
     width: 300px;
@@ -55,11 +51,11 @@
     display: none;
   }
 }
-@media (max-width: 475px) {
+@media (max-width: 540px) {
   .navLogo {
-    width: 120px;
+    display: none;
   }
   .search_field {
-    width: 200px;
+    width: 100%;
   }
 }

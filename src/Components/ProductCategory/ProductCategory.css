@@ -18,12 +18,40 @@
   border-top-right-radius: 20px;
   opacity: 0.9;
 }
+.left_section2 {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 153, 255, 0.7037037037037037) 100%
+  );
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  opacity: 0.9;
+}
+.right_section2 {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 153, 255, 0.7037037037037037) 100%
+  );
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  opacity: 0.9;
+}
 .element_style {
   margin-left: 20px;
   margin-top: 10px;
   color: white;
   font-weight: 580;
   border-bottom: 1px solid rgb(187, 182, 182);
+}
+.right_element_style {
+  background-color: white;
+  border-radius: 20px;
+  padding: 2px 7px; 
+}
+.right_element_style p {
+  font-size: 12px;
 }
 .element_style:hover {
   text-decoration: underline;

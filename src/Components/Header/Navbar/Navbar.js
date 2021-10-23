@@ -10,10 +10,17 @@ import CompanyLogo from "../../../Resources/companyLogo.png";
 import { Link } from "react-router-dom";
 import Select from "react-select";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
 import SelectDD from "@mui/material/Select";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+
+export const MyNavLink = styled(NavLink)`
+  &.${(props) => props.activeClassName} {
+    color: rgba(50, 109, 203);
+    border-bottom: 3px solid rgba(50, 109, 203);
+  }
+`;
 
 const customStyles = {
   control: (base, state) => ({
@@ -58,7 +65,7 @@ const customStyles = {
     return {
       ...defaultStyles,
       color: "black",
-      fontSize: '11px'
+      fontSize: "11px",
     };
   },
 };
@@ -83,7 +90,7 @@ export default function NavbarContainer() {
       </Link>
       <div className="search_field">
         <SelectDD
-          className="ml-3"
+          className="ml-0"
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
           value={age}
@@ -95,7 +102,7 @@ export default function NavbarContainer() {
           <MenuItem value={20}>Services</MenuItem>
           <MenuItem value={30}>Learning</MenuItem>
         </SelectDD>
-        <div style={{ width: "65%" }}>
+        <div style={{ width: "70%" }}>
           <Select
             styles={customStyles}
             placeholder="ImpoNexpo your Products/Services here"
@@ -122,7 +129,7 @@ export default function NavbarContainer() {
           <p>
             <SearchOutlinedIcon
               style={{
-                marginTop: '2px',
+                marginTop: "2px",
                 width: "30px",
                 height: "35px",
                 color: "white",
@@ -134,25 +141,63 @@ export default function NavbarContainer() {
       </div>
       <div className="nav_right_items">
         <MailOutlineIcon className="nav_icons" />
-        <p>My Inbox</p>
+        <p className="nav_text">
+          <MyNavLink
+            to="/my_inbox"
+            style={{ textDecoration: "none", color: "black" }}
+            activeClassName="anyClassNameWillWork"
+          >
+            My Inbox
+          </MyNavLink>
+        </p>
       </div>
       <div className="nav_right_items">
         <DashboardCustomizeIcon className="nav_icons" />
-        <p style={{ textDecoration: "none" }}>
-          <Link to="my_orders">My Order</Link>
+        <p className="nav_text">
+          <MyNavLink
+            to="/my_orders"
+            style={{ textDecoration: "none", color: "black" }}
+            activeClassName="anyClassNameWillWork"
+          >
+            My Order
+          </MyNavLink>
         </p>
       </div>
       <div className="nav_right_items">
         <AddShoppingCartIcon className="nav_icons" />
-        <p>My Cart</p>
+        <p className="nav_text">
+          <MyNavLink
+            to="/my_cart"
+            style={{ textDecoration: "none", color: "black" }}
+            activeClassName="anyClassNameWillWork"
+          >
+            My Cart
+          </MyNavLink>
+        </p>
       </div>
       <div className="nav_right_items">
         <NotificationsIcon className="nav_icons" />
-        <p>Notification</p>
+        <p className="nav_text">
+          <MyNavLink
+            to="/notification"
+            style={{ textDecoration: "none", color: "black" }}
+            activeClassName="anyClassNameWillWork"
+          >
+            Notification
+          </MyNavLink>
+        </p>
       </div>
       <div className="nav_right_items">
         <Avatar className="avatar" />
-        <p>My Imponexpo</p>
+        <p className="nav_text">
+          <MyNavLink
+            to="/my_imponexpo"
+            style={{ textDecoration: "none", color: "black" }}
+            activeClassName="anyClassNameWillWork"
+          >
+            My Imponexpo
+          </MyNavLink>
+        </p>
       </div>
     </div>
   );

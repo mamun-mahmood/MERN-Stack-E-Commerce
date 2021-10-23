@@ -3,6 +3,16 @@ import "./Secondbar.css";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import ArrowDropDownOutlinedIcon from "@mui/icons-material/ArrowDropDownOutlined";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+
+export const MyNavLink = styled(NavLink)`
+  &.${(props) => props.activeClassName} {
+    color: rgba(50, 109, 203);
+    border-bottom: 3px solid rgba(50, 109, 203);
+  }
+`;
+
 export default function Secondbar() {
   return (
     <div className="second_bar container-fluid pl-5 mt-4">
@@ -45,7 +55,9 @@ export default function Secondbar() {
           <a href="#">Link 3</a>
         </div>
       </div>
-      <p>LOGIN/SIGNUP</p>
+      <Link to="/signInuserPage">
+        <p>LOGIN/SIGNUP</p>
+      </Link>
     </div>
   );
 }

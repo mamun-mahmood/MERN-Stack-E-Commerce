@@ -31,7 +31,7 @@ export default function Footer() {
           </p>
           <form action="">
             <input
-              className="search_field bg-light pl-4"
+              className="footer_email_sec bg-light pl-4"
               placeholder="Enter your email"
               type="text"
             />

@@ -1,10 +1,9 @@
 import React from "react";
 import "./ServiceCategory.css";
-import CarouImg from "../../Resources/burgess-milner-OYYE4g-I5ZQ-uns_bu.png";
-import { Carousel } from "react-bootstrap";
-import ContentImg22 from "../../Resources/jason-leung-jWU9FpLW7fI-unspla_bvt@2x.png";
-// import ContentImg55 from "../../Resources/carouimg55.png";
+import ServiceCategoryTemp from "./ServiceCategoryTemp";
+import ServiceCategoryTemp2 from "./ServiceCategoryTemp2";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+
 export default function ServiceCategory() {
   return (
     <div className="bg-white pl-2 pb-3 mt-5 mb-2">
@@ -15,226 +14,27 @@ export default function ServiceCategory() {
       <div className="trending_header">
         <p>service category</p>
       </div>
-      <div className="container bg-light pb-2" style={{ borderRadius: "20px" }}>
-        <div className="row">
-          <div className="col-md-3 bg- p-2 ">
-            <div className="left_section2 pt-5 h-100">
-              <div className="">
-                <p
-                  className="first_option ml-3 pl-3 pt-2 pb-2 bg-white"
-                  style={{
-                    borderTopLeftRadius: "15px",
-                    borderBottomLeftRadius: "15px",
-                    color: "black",
-                    fontWeight: "600",
-                  }}
-                >
-                  Home, House, Garden & Kitchen
-                </p>
-              </div>
-              <div className="element_style">
-                <p>Deals</p>
-              </div>
-              <div className="element_style">
-                <p>Group Import</p>
-              </div>
-              <div className="element_style">
-                <p>To Sales</p>
-              </div>
-              <div className="element_style">
-                <p>Trendings</p>
-              </div>
-              <div className="element_style">
-                <p>Top Products</p>
-              </div>
-              <div className="element_style">
-                <p>To Sales</p>
-              </div>
-              <div className="element_style">
-                <p>Top Products</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-5 mt-3">
-            <div className="">
-              <div
-                className="row"
-                style={{ display: "flex", justifyContent: "center" }}
-              >
-                <div className="col-md-12 ml-3">
-                  <Carousel>
-                    <Carousel.Item>
-                      <img src={CarouImg} alt="image" />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                      <img src={CarouImg} alt="image" />
-                    </Carousel.Item>
-                  </Carousel>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 h-100">
-            <div className="container-fluid">
-              <div
-                className="row hide_scrollBar mt-2"
-                style={{ overflowY: "scroll" }}
-              >
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-                <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
-                  <img src={ContentImg22} alt="image" />
-                  <p
-                    className="m-0"
-                    style={{
-                      textAlign: "center",
-                    }}
-                  >
-                    Cookware
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div>
+        <ServiceCategoryTemp />
+        <ServiceCategoryTemp2 />
       </div>
-      <div style={{display: 'flex', justifyContent: 'center'}}>
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <div
           className="p_style mt-3 box_shadow"
           style={{
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            color: "#326dcb",
-            width: "209px",
+            color: "white",
+            width: "335px",
             height: "54px",
             borderRadius: "30px",
-            // padding: "10px 0px",
-            backgroundColor: "white",
+            backgroundColor: "#326dcb",
             marginBottom: "15px",
           }}
         >
-          <p className="m-0 ml-5" style={{ fontWeight: "600" }}>
-            Source Now
+          <p className="m-0 ml-5" style={{ fontWeight: "600", fontSize: '15px'}}>
+            Explore More Service Category
           </p>
           <div
             style={{
@@ -243,7 +43,7 @@ export default function ServiceCategory() {
               alignItems: "center",
               width: "54px",
               height: "54px",
-              backgroundColor: "#326dcb",
+              backgroundColor: "white",
               borderRadius: "50%",
               padding: "0px 0px",
             }}
@@ -251,7 +51,7 @@ export default function ServiceCategory() {
             <ArrowForwardIosIcon
               className=""
               style={{
-                color: "white",
+                color: "#326dcb",
               }}
             />
           </div>

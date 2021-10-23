@@ -4,7 +4,7 @@ import Banner66 from "../../Resources/banner66.png";
 
 export default function BottomBanner() {
   return (
-    <div className="bg-white">
+    <div className="bg-light mt-4">
       <div className="container pt-4 pb-2">
         <div className="row ">
           <div className="col-md-6 mb-3">

@@ -6,6 +6,7 @@ import ChatIcon from "@mui/icons-material/Chat";
 import { Avatar } from "@mui/material";
 import { Link } from "react-router-dom";
 import AddBoxIcon from "@mui/icons-material/AddBox";
+import SaveIcon from '@mui/icons-material/Save';
 
 export default function ProductCardCustom({ Thumbnail1 }) {
   return (
@@ -23,7 +24,7 @@ export default function ProductCardCustom({ Thumbnail1 }) {
         >
           <div className="d-flex">
             <Avatar />
-            <div className=" ml-2 text-white">
+            <div className="ml-2 text-white">
               <p className="m-0 text-dark">Mamun Mahmood</p>
               <small className="m-0 text-secondary">@username</small>
             </div>
@@ -33,7 +34,7 @@ export default function ProductCardCustom({ Thumbnail1 }) {
               <AddBoxIcon className="icon_white" style={{ color: "red" }} />
               <small>Follow</small>
             </div>
-            <small className="m-0 text-secondary">1.4k Followers</small>
+            <small className="m-0 text-secondary" style={{fontSize: '10px'}}>1.4k Followers</small>
           </div>
         </div>
         <div  style={{position: 'relative'}}
@@ -44,7 +45,9 @@ export default function ProductCardCustom({ Thumbnail1 }) {
             alt=""
           />
           <div
+          
             style={{
+              opacity: '0.8',
               float: 'right',
               position: 'absolute',
               backgroundColor: "#1b1b1b",
@@ -67,6 +70,9 @@ export default function ProductCardCustom({ Thumbnail1 }) {
             </p>
             <p className="icon_white" style={{ paddingBottom: "2px" }}>
               <ShareIcon />
+            </p>
+            <p className="icon_white" style={{ paddingBottom: "2px" }}>
+              <SaveIcon />
             </p>
           </div>
         </div>
