@@ -90,7 +90,7 @@ export default function NavbarContainer() {
       </Link>
       <div className="search_field">
         <SelectDD
-          className="ml-0"
+          className="ml-2"
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
           value={age}
@@ -114,9 +114,9 @@ export default function NavbarContainer() {
           />
         </div>
 
-        <div>
+        <div className="pl-2 pr-2">
           <p>
-            <CameraAltIcon
+            <CameraAltIcon className="search_icon"
               style={{
                 width: "25px",
                 height: "35px",
@@ -125,15 +125,14 @@ export default function NavbarContainer() {
             />
           </p>
         </div>
-        <div>
+        <div className="pl-1 pr-2 " style={{borderLeft: "1px solid grey",}}>
           <p>
-            <SearchOutlinedIcon
+            <SearchOutlinedIcon className="search_icon"
               style={{
                 marginTop: "2px",
                 width: "30px",
                 height: "35px",
                 color: "white",
-                borderLeft: "1px solid grey",
               }}
             />
           </p>
@@ -191,11 +190,11 @@ export default function NavbarContainer() {
         <Avatar className="avatar" />
         <p className="nav_text">
           <MyNavLink
-            to="/my_imponexpo"
+            to="/signInuserPage"
             style={{ textDecoration: "none", color: "black" }}
             activeClassName="anyClassNameWillWork"
           >
-            My Imponexpo
+            Login/Signup
           </MyNavLink>
         </p>
       </div>

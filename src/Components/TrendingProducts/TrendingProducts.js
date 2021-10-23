@@ -10,7 +10,7 @@ export default function TrendingProducts() {
     { width: 1, itemsToShow: 1 },
     { width: 500, itemsToShow: 2 },
     { width: 750, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 },
+    { width: 1100, itemsToShow: 4 },
     { width: 1600, itemsToShow: 5 },
   ];
   return (

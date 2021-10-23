@@ -13,7 +13,7 @@ export default function RightSideSection() {
       </p>
       <form action="">
         <input
-          style={{ borderRadius: "20px", padding: "10px", width: "416px" }}
+          style={{ borderRadius: "20px", padding: "10px", width: "300px" }}
           type="text"
           name=""
           id=""
