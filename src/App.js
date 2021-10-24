@@ -77,7 +77,7 @@ function App() {
       <Route path="/order_track">
         <OrderTrack />
       </Route>
-      <Route to="/seller_section">
+      <Route path="/seller_section">
         <SellerSection/>
       </Route>
       <Footer />
