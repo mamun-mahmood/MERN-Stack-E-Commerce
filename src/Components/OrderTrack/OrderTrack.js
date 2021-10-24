@@ -1,6 +1,12 @@
 import React from "react";
 import "./OrderTrack.css";
+import Box from "@mui/material/Box";
+import Stepper from "@mui/material/Stepper";
+import Step from "@mui/material/Step";
+import StepLabel from "@mui/material/StepLabel";
+
 export default function OrderTrack() {
+  const steps = ["Order Placed", "Processing", "Shipped", "Deliverd"];
   return (
     <div className="container">
       <div className="row">
@@ -71,66 +77,17 @@ export default function OrderTrack() {
           </div>
         </div>
         <div className="col-md-9 mt-3 mt-md-0">
-          <p className="m-0 text-primary">Track Your Order</p>
-          <div className="bg-white">
-            <p
-              className="text-primary"
-              style={{ fontWeight: "550", textAlign: "center" }}
-            >
-              In Warehouse <br />
-              <span className="text-secondary">
-                Your order is on the way with logistics company
-              </span>
-              <div>
-                <section class="time-line-box">
-                  <div class="swiper-container text-center">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <div class="timestamp">
-                          <span class="date">12.07.2019</span>
-                        </div>
-                        <div class="status" style={{borderTop: '3px solid #455EFC'}}>
-                          <span>Order Placed</span>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="timestamp">
-                          <span class="date">12.07.2019</span>
-                        </div>
-                        <div class="status" style={{borderTop: '3px solid #455EFC'}}>
-                          <span>In Warehouse</span>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="timestamp">
-                          <span class="date">12.07.2019</span>
-                        </div>
-                        <div class="status" style={{borderTop: '3px solid white'}}>
-                          <span>Ready To Shipped</span>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="timestamp">
-                          <span class="date">12.07.2019</span>
-                        </div>
-                        <div class="status" style={{borderTop: '3px solid white'}}>
-                          <span>In Transit</span>
-                        </div>
-                      </div>
-                      <div class="swiper-slide">
-                        <div class="timestamp">
-                          <span class="date">12.07.2019</span>
-                        </div>
-                        <div class="status" style={{borderTop: '3px solid white'}}>
-                          <span>Deliverd</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                  </div>
-                </section>
-              </div>
-            </p>
+          <p className="m-0 text-dark mt-3" style={{textAlign: 'center', fontSize: '20px'}}>Order Tracking</p>
+          <div className="mt-5">
+            <Box sx={{ width: "100%",}}>
+              <Stepper activeStep={1} alternativeLabel>
+                {steps.map((label) => (
+                  <Step key={label}>
+                    <StepLabel>{label}</StepLabel>
+                  </Step>
+                ))}
+              </Stepper>
+            </Box>
           </div>
         </div>
       </div>
