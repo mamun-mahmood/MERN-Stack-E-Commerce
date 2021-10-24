@@ -85,7 +85,22 @@ export default function NavbarContainer() {
   };
   return (
     <div>
-      <div className="bg-white w-100 p-5" style={{zIndex: '8', position: 'fixed', top: '0'}}></div>
+      <div
+        className="bg-white w-100"
+        style={{ zIndex: "8", position: "fixed", top: "0" }}
+      >
+        <marquee
+          className="p-3"
+          width="100%"
+          style={{ fontSize: "20px" }}
+          direction="left"
+        >
+          Welcome to ImpoNexpo, we are a multivendor B2B Ecommerce Platfrom.
+          Here you will find millions of product from thousands of companies
+          accross the world. You can buy your desired products or services just
+          right here. Read our privacy policy for more information.
+        </marquee>
+      </div>
       <div className="navbar_container container-fluid bg-white pl-2 pr-2">
         <Link to="/">
           <img className="navLogo" src={CompanyLogo} alt="image" />

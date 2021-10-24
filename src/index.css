@@ -12,3 +12,8 @@ body {
   position: -webkit-sticky;
   top: 0;
 }
+@media (max-width: 700px) {
+  .topbar_contaier {
+    display: none;
+  }
+}

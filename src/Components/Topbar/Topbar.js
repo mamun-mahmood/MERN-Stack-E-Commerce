@@ -11,7 +11,7 @@ export default function Topbar() {
     setAge(event.target.value);
   };
   return (
-    <div>
+    <div className="topbar_contaier">
       <div
         className="topbar bg-dark pt-2 mb-1"
         style={{
