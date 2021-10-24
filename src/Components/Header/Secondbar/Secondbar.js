@@ -15,7 +15,7 @@ export const MyNavLink = styled(NavLink)`
 
 export default function Secondbar() {
   return (
-    <div className="second_bar container-fluid pl-5 mt-4">
+    <div className="second_bar bg-white container-fluid pl-5">
       <div className="second_bar_left pl-2">
         <MenuOutlinedIcon />
         <p>Categories</p>
@@ -42,7 +42,7 @@ export default function Secondbar() {
         </div>
       </Link>
       <Link to="/help_page" style={{ color: "black" }}>
-        <div>
+        <div className="pr-5">
           <p style={{ textDecoration: "none" }}>HELP</p>
         </div>
       </Link>      

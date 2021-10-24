@@ -4,7 +4,7 @@ import KeyboardArrowRightSharpIcon from '@mui/icons-material/KeyboardArrowRightS
 
 export default function SideCategory() {
   return (
-    <div className="left_side_category bg-light pt-1 pb-1 hide_scrollBar p-2">
+    <div className="left_side_category bg-white pt-1 pb-1 hide_scrollBar p-2">
       <>
         {/* <DropdownButton
           key="end"

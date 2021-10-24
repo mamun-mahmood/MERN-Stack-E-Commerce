@@ -30,7 +30,7 @@ export default function Topbar() {
             <p style={{ textDecoration: "none" }}>For Buyers</p>
           </div>
         </Link>
-        <p>Make Money On Globalhub</p>
+        <p>Make Money On Globahub</p>
         <div>
           <Select
             className="ml-2"

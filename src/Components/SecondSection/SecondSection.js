@@ -5,7 +5,7 @@ import SideCategory from './SideCategory/SideCategory'
 
 export default function SecondSection() {
     return (
-        <div className="side_category d-flex mt-1 pb-4 bg-white">
+        <div className="side_category d-flex pb-4 bg-white">
             <CarouselContailer/>
             <SideCategory/>
             <RightSideSection/>

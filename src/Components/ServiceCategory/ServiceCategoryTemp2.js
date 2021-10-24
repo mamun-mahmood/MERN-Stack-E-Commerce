@@ -9,7 +9,7 @@ export default function ServiceCategoryTemp2() {
   return (
     <div>
       <div
-        className="container-fluid box_shadow bg-light pb-2 mt-5"
+        className="container-fluid box_shadow bg-white pb-2 mt-5"
         style={{ borderRadius: "20px", width: '98%', marginLeft: '1%' }}
       >
         <div className="row">

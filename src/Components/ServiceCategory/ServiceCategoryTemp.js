@@ -7,7 +7,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function ServiceCategoryTemp() {
   return (
     <div>
-      <div className="container-fluid bg-light pb-2 box_shadow" style={{ borderRadius: "20px", width: '98%', marginLeft: '1%' }}>
+      <div className="container-fluid bg-white pb-2 box_shadow" style={{ borderRadius: "20px", width: '98%', marginLeft: '1%' }}>
         <div className="row">
           <div className="col-md-3 bg- p-2 ">
             <div className="service_category_left_section pt-5 h-100">
