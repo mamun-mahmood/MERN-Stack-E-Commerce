@@ -2,7 +2,9 @@ import { Select } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 import MenuItem from "@mui/material/MenuItem";
-
+import India from "../../Resources/india-pngrepo-com.png"
+import China from "../../Resources/china-pngrepo-com.png"
+import UK from "../../Resources/united-kingdom-pngrepo-com.png"
 export default function Topbar() {
   const [age, setAge] = React.useState("English");
   const handleChange = (event) => {
@@ -38,9 +40,9 @@ export default function Topbar() {
             onChange={handleChange}
             style={{ color: "white", height: "40px", marginTop: "-5px" }}
           >
-            <MenuItem value="English">English</MenuItem>
-            <MenuItem value={20}>Chinese</MenuItem>
-            <MenuItem value={30}>Hindi</MenuItem>
+            <MenuItem value="English"><img width={30} className="mr-1" src={UK} alt="" /><span className="mt-2">English</span></MenuItem>
+            <MenuItem value={20}><img width={30} className="mr-1" src={China} alt="" /><span className="mt-2">Chinese</span></MenuItem>
+            <MenuItem value={30}><img width={30} className="mr-1" src={India} alt="" /><span className="mt-2">India</span></MenuItem>
           </Select>
         </div>
       </div>
