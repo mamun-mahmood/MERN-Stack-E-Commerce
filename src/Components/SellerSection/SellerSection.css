@@ -1,0 +1,15 @@
+.seller_left_elemnt {
+    text-align: center;
+    border-right: 1px solid grey;
+    color: grey;
+}
+.seller_section_right {
+    display: flex;
+    justify-content: space-around;
+}
+.seller_right_icons {
+    color: rgb(93, 92, 92);
+}
+.store_search_btn:hover {
+    cursor: pointer;
+}

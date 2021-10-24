@@ -42,7 +42,12 @@ export default function Secondbar() {
           <p style={{ textDecoration: "none" }}>TRACK ORDER</p>
         </div>
       </Link>
-      <div className="dropdown">
+      <Link to="/help_page" style={{ color: "black" }}>
+        <div>
+          <p style={{ textDecoration: "none" }}>HELP</p>
+        </div>
+      </Link>
+      {/* <div className="dropdown">
         <div style={{ display: "flex", alignItems: "center" }}>
           <p className="dropbtn">HELP</p>
           <p>
@@ -54,7 +59,7 @@ export default function Secondbar() {
           <a href="#">Link 2</a>
           <a href="#">Link 3</a>
         </div>
-      </div>
+      </div> */}
       
     </div>
   );

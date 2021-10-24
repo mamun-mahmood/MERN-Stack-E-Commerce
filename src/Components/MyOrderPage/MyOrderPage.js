@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./MyOrderPage..css";
 export default function MyOrderPage() {
   return (
-    <div>
+    <div className="mt-3">
       <p style={{ textAlign: "center", color: "black", fontWeight: "600" }}>
         My Orders
       </p>

@@ -4,3 +4,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* padding-top: 90px; */
 }
+.bg-white {
+  background-color: white !important;
+}

@@ -5,7 +5,7 @@ import ContentImg55 from "../../Resources/carouimg55.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function ProductCategoryTemp() {
   return (
-    <div className="container-fluid bg-light box_shadow" style={{ borderRadius: "20px", width: '98%', marginLeft: '1%'}}>
+    <div className="container-fluid product_card_temp_main bg-light box_shadow" style={{ borderRadius: "20px", width: '98%', marginLeft: '1%'}}>
       <div className="row">
         <div className="col-md-2 bg- p-2 ">
           <div className="left_section pt-5 h-100">
@@ -46,20 +46,20 @@ export default function ProductCategoryTemp() {
           </div>
         </div>
         <div
-          className="col-md-4 "
+          className="col-md-4"
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Carousel controls={false} indicators={false}>
+          <Carousel controls={false}>
             <Carousel.Item>
-              <img src={CarouImg} alt="image" />
+              <img src={CarouImg} alt="image" style={{height: '100%'}}/>
             </Carousel.Item>
-            <Carousel.Item>
+            {/* <Carousel.Item>
               <img src={CarouImg} alt="image" />
-            </Carousel.Item>
+            </Carousel.Item> */}
           </Carousel>
         </div>
         <div className="col-md-3 h-100">
@@ -75,7 +75,7 @@ export default function ProductCategoryTemp() {
                     style={{
                       position: "absolute",
                       top: "78%",
-                      fontWeight: "600",
+                      fontWeight: "500",
                       color: "white",
                     }}
                   >

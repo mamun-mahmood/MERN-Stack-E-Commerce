@@ -125,7 +125,7 @@ export default function NavbarContainer() {
             />
           </p>
         </div>
-        <div className="pl-1 pr-2 " style={{borderLeft: "1px solid grey",}}>
+        <div className="pl-1 pr-2 " style={{borderRight: "1px solid grey",}}>
           <p>
             <SearchOutlinedIcon className="search_icon"
               style={{

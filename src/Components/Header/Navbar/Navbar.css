@@ -49,9 +49,20 @@
     width: 400px;
   }
 }
+@media (max-width: 960px) {
+  .navLogo {
+    width: 80px;
+  }
+}
 @media (max-width: 860px) {
   .nav_right_items {
     display: none;
+  }
+  .navLogo {
+    display: none;
+  }
+  .search_field {
+    width: 100%;
   }
 }
 @media (max-width: 540px) {

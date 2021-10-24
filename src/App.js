@@ -24,6 +24,7 @@ import ProductCategory from "./Components/ProductCategory/ProductCategory";
 import BottomBanner from "./Components/BottomBanner/BottomBanner";
 import SourceByRegion from "./Components/SourceByRegion/SourceByRegion";
 import ScrollToTop from "./ScrollToTop";
+import SellerSection from "./Components/SellerSection/SellerSection";
 
 function App() {
   return (
@@ -75,6 +76,9 @@ function App() {
       </Route>
       <Route path="/order_track">
         <OrderTrack />
+      </Route>
+      <Route to="/seller_section">
+        <SellerSection/>
       </Route>
       <Footer />
       <Switch></Switch>

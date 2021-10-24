@@ -226,8 +226,11 @@ export default function ProductDetailsPage() {
                 >
                   Group Buy
                 </Button>
-                <div className="bg-light p-1" style={{display: `${GroupBuy ? 'block' : 'none'} `}}>
-                  <div style={{ width: "100%", display: 'flex'}}>
+                <div
+                  className="bg-light p-1"
+                  style={{ display: `${GroupBuy ? "block" : "none"} ` }}
+                >
+                  <div style={{ width: "100%", display: "flex" }}>
                     <div style={{ display: "flex" }}>
                       <p className="quantity_control">
                         <Remove />
@@ -259,10 +262,38 @@ export default function ProductDetailsPage() {
                       </p>
                     </div>
                   </div>
-                  <small className="m-0 p-0">For group buy, minimum order quantity is 10.</small>
-                  <div style={{display: 'flex', justifyContent: 'space-between'}}>
-                    <Button fullWidth style={{textTransform: 'capitalize', color: 'white', background: 'grey', margin: '1px', height: '40px', fontSize: '10px'}}>Initial Group Order</Button>
-                    <Button fullWidth style={{textTransform: 'capitalize', color: 'white', background: 'grey', margin: '1px', height: '40px', fontSize: '10px'}}>Join Existing</Button>
+                  <small className="m-0 p-0">
+                    For group buy, minimum order quantity is 10.
+                  </small>
+                  <div
+                    style={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Button
+                      fullWidth
+                      style={{
+                        textTransform: "capitalize",
+                        color: "white",
+                        background: "grey",
+                        margin: "1px",
+                        height: "40px",
+                        fontSize: "10px",
+                      }}
+                    >
+                      Initial Group Order
+                    </Button>
+                    <Button
+                      fullWidth
+                      style={{
+                        textTransform: "capitalize",
+                        color: "white",
+                        background: "grey",
+                        margin: "1px",
+                        height: "40px",
+                        fontSize: "10px",
+                      }}
+                    >
+                      Join Existing
+                    </Button>
                   </div>
                 </div>
               </div>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./MyProfile.css";
 export default function MyProfile() {
   return (
-    <div className="container">
+    <div className="container mt-3">
       <div className="row">
         <div className="col-md-2 bg-white p-0 round">
           <div className="border_bottom">

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function OrderDetails() {
   return (
-    <div className="container">
+    <div className="container mt-3">
       <div className="row">
         <div className=" col-md-2 col-12 w-100 bg-white p-0 round p-2">
           <div className="border_bottom">
