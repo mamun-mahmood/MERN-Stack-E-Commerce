@@ -10,7 +10,7 @@ export default function ServiceCategoryTemp2() {
     <div>
       <div
         className="container-fluid box_shadow bg-white pb-2 mt-5"
-        style={{ borderRadius: "20px", width: '98%', marginLeft: '1%' }}
+        style={{ borderRadius: "20px", width: "98%", marginLeft: "1%" }}
       >
         <div className="row">
           <div className="col-md-3 bg- p-2 ">
@@ -40,14 +40,115 @@ export default function ServiceCategoryTemp2() {
               <div className="element_style">
                 <p>Trendings</p>
               </div>
-              <div className="element_style">
-                <p>Top Products</p>
-              </div>
-              <div className="element_style">
-                <p>To Sales</p>
-              </div>
-              <div className="element_style">
-                <p>Top Products</p>
+              <div className="">
+                <p className="text-white pl-2 mt-2">Suggested Accounts</p>
+                <div className="container">
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-white mt-3 pl-2">Suggested Tags</p>
+                <div className="container">
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -117,8 +218,7 @@ export default function ServiceCategoryTemp2() {
           <div className="col-md-4 h-100">
             <div className="container-fluid">
               <div
-                className="row hide_scrollBar mt-2"
-                style={{ overflowY: "scroll" }}
+                className="row hide_scrollBar mt-4"
               >
                 <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
                   <img src={ContentImg22} alt="image" />

@@ -7,7 +7,10 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 export default function ServiceCategoryTemp() {
   return (
     <div>
-      <div className="container-fluid bg-white pb-2 box_shadow" style={{ borderRadius: "20px", width: '98%', marginLeft: '1%' }}>
+      <div
+        className="container-fluid bg-white pb-2 box_shadow"
+        style={{ borderRadius: "20px", width: "98%", marginLeft: "1%" }}
+      >
         <div className="row">
           <div className="col-md-3 bg- p-2 ">
             <div className="service_category_left_section pt-5 h-100">
@@ -36,14 +39,115 @@ export default function ServiceCategoryTemp() {
               <div className="element_style">
                 <p>Trendings</p>
               </div>
-              <div className="element_style">
-                <p>Top Products</p>
-              </div>
-              <div className="element_style">
-                <p>To Sales</p>
-              </div>
-              <div className="element_style">
-                <p>Top Products</p>
+              <div className="">
+                <p className="text-white pl-2 mt-2">Suggested Accounts</p>
+                <div className="container">
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">@mx099</p>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-white mt-3 pl-2">Suggested Tags</p>
+                <div className="container">
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                  </div>
+                  <div
+                    className="w-100 mb-3"
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                    <div className="right_element_style">
+                      <p className="m-0 text-secondary">#mx099</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -113,8 +217,7 @@ export default function ServiceCategoryTemp() {
           <div className="col-md-4 h-100">
             <div className="container-fluid">
               <div
-                className="row hide_scrollBar mt-2"
-                style={{ overflowY: "scroll" }}
+                className="row hide_scrollBar mt-4"
               >
                 <div className="col-md-5 ml-3 bg-white p-1 round mt-1 box_shadow">
                   <img src={ContentImg22} alt="image" />
@@ -208,46 +311,46 @@ export default function ServiceCategoryTemp() {
             </div>
           </div>
         </div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
-        <div
-          className="p_style mt-3 box_shadow"
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            color: "#326dcb",
-            width: "209px",
-            height: "54px",
-            borderRadius: "30px",
-            // padding: "10px 0px",
-            backgroundColor: "white",
-            marginBottom: "15px",
-          }}
-        >
-          <p className="m-0 ml-5" style={{ fontWeight: "600" }}>
-            Source Now
-          </p>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <div
+            className="p_style mt-3 box_shadow"
             style={{
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "space-between",
               alignItems: "center",
-              width: "54px",
+              color: "#326dcb",
+              width: "209px",
               height: "54px",
-              backgroundColor: "#326dcb",
-              borderRadius: "50%",
-              padding: "0px 0px",
+              borderRadius: "30px",
+              // padding: "10px 0px",
+              backgroundColor: "white",
+              marginBottom: "15px",
             }}
           >
-            <ArrowForwardIosIcon
-              className=""
+            <p className="m-0 ml-5" style={{ fontWeight: "600" }}>
+              Source Now
+            </p>
+            <div
               style={{
-                color: "white",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "54px",
+                height: "54px",
+                backgroundColor: "#326dcb",
+                borderRadius: "50%",
+                padding: "0px 0px",
               }}
-            />
+            >
+              <ArrowForwardIosIcon
+                className=""
+                style={{
+                  color: "white",
+                }}
+              />
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
