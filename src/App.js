@@ -33,7 +33,7 @@ function App() {
       <Header /> {/* TopBanner Header and secondBanner */}
       <div
         style={{
-          paddingTop: "60px",
+          paddingTop: "70px",
         }}
       ></div>
       <Route exact path="/">

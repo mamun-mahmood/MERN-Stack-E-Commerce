@@ -36,7 +36,6 @@ export default function Secondbar() {
           <a href="#">Link 3</a>
         </div>
       </div>
-      <p>CUSTOMER CARE</p>
       <Link to="/order_track" style={{ color: "black" }}>
         <div>
           <p style={{ textDecoration: "none" }}>TRACK ORDER</p>
