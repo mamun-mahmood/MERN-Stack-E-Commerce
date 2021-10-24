@@ -46,21 +46,7 @@ export default function Secondbar() {
         <div>
           <p style={{ textDecoration: "none" }}>HELP</p>
         </div>
-      </Link>
-      {/* <div className="dropdown">
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <p className="dropbtn">HELP</p>
-          <p>
-            <ArrowDropDownOutlinedIcon />
-          </p>
-        </div>
-        <div className="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-      </div> */}
-      
+      </Link>      
     </div>
   );
 }

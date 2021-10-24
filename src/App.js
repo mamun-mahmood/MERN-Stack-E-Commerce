@@ -31,11 +31,11 @@ function App() {
     <Router>
       <ScrollToTop />
       <Header /> {/* TopBanner Header and secondBanner */}
-      <div style={{
-        paddingTop: '70px'
-      }}>
-
-      </div>
+      <div
+        style={{
+          paddingTop: "60px",
+        }}
+      ></div>
       <Route exact path="/">
         <Secondbar />
         <SecondSection />
@@ -78,7 +78,7 @@ function App() {
         <OrderTrack />
       </Route>
       <Route path="/seller_section">
-        <SellerSection/>
+        <SellerSection />
       </Route>
       <Footer />
       <Switch></Switch>

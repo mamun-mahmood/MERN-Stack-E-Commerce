@@ -84,119 +84,124 @@ export default function NavbarContainer() {
     setAge(event.target.value);
   };
   return (
-    <div className="navbar_container container-fluid bg-light pl-2 pr-2">
-      <Link to="/">
-        <img className="navLogo" src={CompanyLogo} alt="image" />
-      </Link>
-      <div className="search_field">
-        <SelectDD
-          className="ml-2"
-          labelId="demo-simple-select-filled-label"
-          id="demo-simple-select-filled"
-          value={age}
-          onChange={handleChange}
-          style={{ color: "white" }}
-        >
-          <MenuItem value="All">ALL</MenuItem>
-          <MenuItem value={10}>Product</MenuItem>
-          <MenuItem value={20}>Services</MenuItem>
-          <MenuItem value={30}>Learning</MenuItem>
-        </SelectDD>
-        <div style={{ width: "70%" }}>
-          <Select
-            styles={customStyles}
-            placeholder="ImpoNexpo your Products/Services here"
-            options={aquaticCreatures}
-            components={{
-              DropdownIndicator: () => null,
-              IndicatorSeparator: () => null,
-            }}
-          />
-        </div>
+    <div>
+      <div className="bg-light w-100 p-5" style={{zIndex: '8', position: 'fixed', top: '0'}}></div>
+      <div className="navbar_container container-fluid bg-light pl-2 pr-2">
+        <Link to="/">
+          <img className="navLogo" src={CompanyLogo} alt="image" />
+        </Link>
+        <div className="search_field">
+          <SelectDD
+            className="ml-2"
+            labelId="demo-simple-select-filled-label"
+            id="demo-simple-select-filled"
+            value={age}
+            onChange={handleChange}
+            style={{ color: "white" }}
+          >
+            <MenuItem value="All">ALL</MenuItem>
+            <MenuItem value={10}>Product</MenuItem>
+            <MenuItem value={20}>Services</MenuItem>
+            <MenuItem value={30}>Learning</MenuItem>
+          </SelectDD>
+          <div style={{ width: "70%" }}>
+            <Select
+              styles={customStyles}
+              placeholder="ImpoNexpo your Products/Services here"
+              options={aquaticCreatures}
+              components={{
+                DropdownIndicator: () => null,
+                IndicatorSeparator: () => null,
+              }}
+            />
+          </div>
 
-        <div className="pl-2 pr-2">
-          <p>
-            <CameraAltIcon className="search_icon"
-              style={{
-                width: "25px",
-                height: "35px",
-                color: "white",
-              }}
-            />
+          <div className="pl-2 pr-2">
+            <p>
+              <CameraAltIcon
+                className="search_icon"
+                style={{
+                  width: "25px",
+                  height: "35px",
+                  color: "white",
+                }}
+              />
+            </p>
+          </div>
+          <div className="pl-1 pr-2 " style={{ borderLeft: "1px solid grey" }}>
+            <p>
+              <SearchOutlinedIcon
+                className="search_icon"
+                style={{
+                  marginTop: "2px",
+                  width: "30px",
+                  height: "35px",
+                  color: "white",
+                }}
+              />
+            </p>
+          </div>
+        </div>
+        <div className="nav_right_items">
+          <MailOutlineIcon className="nav_icons" />
+          <p className="nav_text">
+            <MyNavLink
+              to="/my_inbox"
+              style={{ textDecoration: "none", color: "black" }}
+              activeClassName="anyClassNameWillWork"
+            >
+              My Inbox
+            </MyNavLink>
           </p>
         </div>
-        <div className="pl-1 pr-2 " style={{borderLeft: "1px solid grey",}}>
-          <p>
-            <SearchOutlinedIcon className="search_icon"
-              style={{
-                marginTop: "2px",
-                width: "30px",
-                height: "35px",
-                color: "white",
-              }}
-            />
+        <div className="nav_right_items">
+          <DashboardCustomizeIcon className="nav_icons" />
+          <p className="nav_text">
+            <MyNavLink
+              to="/my_orders"
+              style={{ textDecoration: "none", color: "black" }}
+              activeClassName="anyClassNameWillWork"
+            >
+              My Order
+            </MyNavLink>
           </p>
         </div>
-      </div>
-      <div className="nav_right_items">
-        <MailOutlineIcon className="nav_icons" />
-        <p className="nav_text">
-          <MyNavLink
-            to="/my_inbox"
-            style={{ textDecoration: "none", color: "black" }}
-            activeClassName="anyClassNameWillWork"
-          >
-            My Inbox
-          </MyNavLink>
-        </p>
-      </div>
-      <div className="nav_right_items">
-        <DashboardCustomizeIcon className="nav_icons" />
-        <p className="nav_text">
-          <MyNavLink
-            to="/my_orders"
-            style={{ textDecoration: "none", color: "black" }}
-            activeClassName="anyClassNameWillWork"
-          >
-            My Order
-          </MyNavLink>
-        </p>
-      </div>
-      <div className="nav_right_items">
-        <AddShoppingCartIcon className="nav_icons" />
-        <p className="nav_text">
-          <MyNavLink
-            to="/my_cart"
-            style={{ textDecoration: "none", color: "black" }}
-            activeClassName="anyClassNameWillWork"
-          >
-            My Cart
-          </MyNavLink>
-        </p>
-      </div>
-      <div className="nav_right_items">
-        <NotificationsIcon className="nav_icons" />
-        <p className="nav_text">
-          <MyNavLink
-            to="/notification"
-            style={{ textDecoration: "none", color: "black" }}
-            activeClassName="anyClassNameWillWork"
-          >
-            Notification
-          </MyNavLink>
-        </p>
-      </div>
-      <div className="nav_right_items">
-        <Avatar className="avatar" />
-        <p className="nav_text">
-          <MyNavLink
-            to="/signInuserPage"
-            style={{ textDecoration: "none", color: "black" }}
-            activeClassName="anyClassNameWillWork"
-          >
-            Login/Signup
-          </MyNavLink>
-        </p>
+        <div className="nav_right_items">
+          <AddShoppingCartIcon className="nav_icons" />
+          <p className="nav_text">
+            <MyNavLink
+              to="/my_cart"
+              style={{ textDecoration: "none", color: "black" }}
+              activeClassName="anyClassNameWillWork"
+            >
+              My Cart
+            </MyNavLink>
+          </p>
+        </div>
+        <div className="nav_right_items">
+          <NotificationsIcon className="nav_icons" />
+          <p className="nav_text">
+            <MyNavLink
+              to="/notification"
+              style={{ textDecoration: "none", color: "black" }}
+              activeClassName="anyClassNameWillWork"
+            >
+              Notification
+            </MyNavLink>
+          </p>
+        </div>
+        <div className="nav_right_items">
+          <Avatar className="avatar" />
+          <p className="nav_text">
+            <MyNavLink
+              to="/signInuserPage"
+              style={{ textDecoration: "none", color: "black" }}
+              activeClassName="anyClassNameWillWork"
+            >
+              Login/Signup
+            </MyNavLink>
+          </p>
+        </div>
       </div>
     </div>
   );

@@ -5,5 +5,10 @@ body {
   /* padding-top: 90px; */
 }
 .bg-white {
-  background-color: #FFFFFF !important;
+  background-color: #ffffff !important;
+}
+.topbar {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
