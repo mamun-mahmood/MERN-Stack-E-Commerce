@@ -13,8 +13,9 @@ export default function Topbar() {
   return (
     <div className="topbar_contaier">
       <div
-        className="topbar bg-dark pt-2 mb-1"
+        className="topbar pt-2 mb-1"
         style={{
+          backgroundColor: 'rgba(50, 109, 203)',
           zIndex: "11",
           display: "flex",
           justifyContent: "space-around",

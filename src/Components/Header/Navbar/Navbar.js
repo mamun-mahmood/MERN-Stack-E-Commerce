@@ -32,7 +32,7 @@ const customStyles = {
     cursor: "text",
     borderRadius: "5px",
     marginLeft: "5px",
-    backgroundColor: "white",
+    backgroundColor: "rgba(50, 109, 203)",
     textAlign: "center",
   }),
 
@@ -47,24 +47,25 @@ const customStyles = {
 
   input: (styles) => ({
     ...styles,
-    color: "black",
+    color: "white",
   }),
 
   menu: (styles) => ({
     ...styles,
-    marginTop: 7,
+    marginTop: -1,
     boxShadow: "none",
     borderRadius: 0,
+    backgroundColor: "rgba(50, 109, 203)",
   }),
 
   singleValue: (styles) => ({
     ...styles,
-    color: "black",
+    color: "white",
   }),
   placeholder: (defaultStyles) => {
     return {
       ...defaultStyles,
-      color: "black",
+      color: "white",
       fontSize: "11px",
     };
   },
@@ -107,12 +108,14 @@ export default function NavbarContainer() {
         </Link>
         <div className="search_field">
           <SelectDD
-            className="ml-2"
+          variant="standard"
+            className="ml-3"
             labelId="demo-simple-select-filled-label"
             id="demo-simple-select-filled"
             value={age}
             onChange={handleChange}
-            style={{ color: "white" }}
+            disableUnderline
+            style={{ color: "white", backgroundColor: 'rgba(50, 109, 203)'}}
           >
             <MenuItem value="All">ALL</MenuItem>
             <MenuItem value={10}>Product</MenuItem>
