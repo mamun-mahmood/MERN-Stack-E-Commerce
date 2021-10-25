@@ -56,6 +56,8 @@ const customStyles = {
     boxShadow: "none",
     borderRadius: 0,
     backgroundColor: "rgba(50, 109, 203)",
+    borderBottomLeftRadius: 5,
+    borderBottomRightRadius: 5,
   }),
 
   singleValue: (styles) => ({

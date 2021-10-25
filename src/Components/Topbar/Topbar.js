@@ -43,7 +43,7 @@ export default function Topbar() {
           >
             <MenuItem value="English"><img width={30} className="mr-1" src={UK} alt="" /><span className="mt-2">English</span></MenuItem>
             <MenuItem value={20}><img width={30} className="mr-1" src={China} alt="" /><span className="mt-2">Chinese</span></MenuItem>
-            <MenuItem value={30}><img width={30} className="mr-1" src={India} alt="" /><span className="mt-2">India</span></MenuItem>
+            <MenuItem value={30}><img width={30} className="mr-1" src={India} alt="" /><span className="mt-2">Hindi</span></MenuItem>
           </Select>
         </div>
       </div>
