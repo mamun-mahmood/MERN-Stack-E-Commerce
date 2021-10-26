@@ -1,6 +1,8 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
-
+import ChatBar from "./ChatBar/ChatBar";
+import Sidebar from "./Sidebar/Sidebar";
+import "./modal.css";
 export default function ModalContainer(props) {
   return (
     <Modal
@@ -8,19 +10,11 @@ export default function ModalContainer(props) {
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
+      className="modal_main round"
     >
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-            Your Inbox
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body>
-        <h4>Centered Modal</h4>
-        <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
-        </p>
+      <Modal.Body className="modal_body bg-light round">
+        <Sidebar />
+        <ChatBar />
       </Modal.Body>
     </Modal>
   );

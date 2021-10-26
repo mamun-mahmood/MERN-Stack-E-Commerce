@@ -25,64 +25,67 @@ import BottomBanner from "./Components/BottomBanner/BottomBanner";
 import SourceByRegion from "./Components/SourceByRegion/SourceByRegion";
 import ScrollToTop from "./ScrollToTop";
 import SellerSection from "./Components/SellerSection/SellerSection";
+import AuthProvider from "./Components/AuthContext";
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <Header /> {/* TopBanner Header and secondBanner */}
-      <div
-        style={{
-          paddingTop: "70px",
-        }}
-      ></div>
-      <Route exact path="/">
-        <Secondbar />
-        <SecondSection />
-        <FlashSell />
-        <Midsection />
-        <TrendingProducts />
-        <TrendingService />
-        <TrendingLiveStream />
-        <BottomBanner />
-        <ProductCategory />
-        <ServiceCategory />
-        <Testimonial />
-        <SourceByRegion />
-      </Route>
-      <Route path="/signInuserPage">
-        <SignUp />
-      </Route>
-      <Route path="/product_details">
-        <ProductDetailsPage />
-      </Route>
-      <Route path="/checkout_here">
-        <CheckoutPage />
-      </Route>
-      <Route path="/payment_Page">
-        <PaymentPage />
-      </Route>
-      <Route path="/help_page">
-        <HelpPage />
-      </Route>
-      <Route path="/my_orders">
-        <MyOrderPage />
-      </Route>
-      <Route path="/order_details">
-        <OrderDetails />
-      </Route>
-      <Route path="/my_profile">
-        <MyProfile />
-      </Route>
-      <Route path="/order_track">
-        <OrderTrack />
-      </Route>
-      <Route path="/seller_section">
-        <SellerSection />
-      </Route>
-      <Footer />
-      <Switch></Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <ScrollToTop />
+        <Header /> {/* TopBanner Header and secondBanner */}
+        <div
+          style={{
+            paddingTop: "70px",
+          }}
+        ></div>
+        <Route exact path="/">
+          <Secondbar />
+          <SecondSection />
+          <FlashSell />
+          <Midsection />
+          <TrendingProducts />
+          <TrendingService />
+          <TrendingLiveStream />
+          <BottomBanner />
+          <ProductCategory />
+          <ServiceCategory />
+          <Testimonial />
+          <SourceByRegion />
+        </Route>
+        <Route path="/signInuserPage">
+          <SignUp />
+        </Route>
+        <Route path="/product_details">
+          <ProductDetailsPage />
+        </Route>
+        <Route path="/checkout_here">
+          <CheckoutPage />
+        </Route>
+        <Route path="/payment_Page">
+          <PaymentPage />
+        </Route>
+        <Route path="/help_page">
+          <HelpPage />
+        </Route>
+        <Route path="/my_orders">
+          <MyOrderPage />
+        </Route>
+        <Route path="/order_details">
+          <OrderDetails />
+        </Route>
+        <Route path="/my_profile">
+          <MyProfile />
+        </Route>
+        <Route path="/order_track">
+          <OrderTrack />
+        </Route>
+        <Route path="/seller_section">
+          <SellerSection />
+        </Route>
+        <Footer />
+        <Switch></Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

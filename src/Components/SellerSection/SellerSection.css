@@ -14,9 +14,8 @@
     cursor: pointer;
 }
 .p_btn:hover {
-    background-color: rgba(50, 109, 203);
     cursor: pointer;
-    padding: 2px;
-    color: white;
-    border-radius: 5px;
+    padding: 1px;
+    color: black;
+
 }

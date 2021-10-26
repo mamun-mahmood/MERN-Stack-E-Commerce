@@ -1,4 +1,4 @@
-import * as React from "react";
+import { React, useRef, useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -15,40 +15,88 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./Signup.css";
 import gLogo from "../../Resources/google.svg";
 import fbLogo from "../../Resources/facebook.svg";
-import {signInWithPopup} from 'firebase/auth'
-import {auth, provider} from '../../FirebaseConfig'
+import { useAuth } from "../AuthContext";
+import { useHistory } from "react-router-dom";
+
 const theme = createTheme();
 
 export default function SignIn() {
-  const signInWithGoogle = () => {
-    signInWithPopup(auth, provider)
-    .then(res => {
-      console.log(res);
-    })
-    .catch(err => console.log(err))
-  }
-  const [newUser, setNewUser] = React.useState(false);
-  const matchPassword = (e) => {
-    // if (e.target.name === "confirmPassword") {
-      //   if (e.target.value === validPassword) {
-        //     const newUserInfo = { ...user };
-        //     newUserInfo.error = "Password Matched";
-        //     newUserInfo.matchedPassword = true;
-        //     setUser(newUserInfo);
-        //   } else {
-          //     const newUserInfo = { ...user };
-          //     newUserInfo.error = "Password is not matching";
-          //     newUserInfo.matchedPassword = false;
-    //     setUser(newUserInfo);
-    //   }
-    // }
+  const [newUser, setNewUser] = useState(false);
+
+  const [user, setUser] = useState({
+    isSignedIn: false,
+    name: "",
+    email: "",
+    password: "",
+    photo: "",
+    error: "",
+    success: false,
+    matchedPassword: false,
+  });
+  let isFromValid = true;
+  const [validPassword, setValidPassword] = useState("");
+  const handleChange = (e) => {
+    if (e.target.name === "name") {
+      user.name = e.target.value;
+    }
+    if (e.target.name === "email") {
+      var re = /\S+@\S+\.\S+/;
+      isFromValid = re.test(e.target.value);
+      if (!isFromValid && newUser) {
+        const newUserInfo = { ...user };
+        newUserInfo.error = "Invalid Email";
+        setUser(newUserInfo);
+      } else user.error = "";
+      setUser[e.target.name] = e.target.value;
+    }
+    if (e.target.name === "password") {
+      if (e.target.value.length < 6 && newUser) {
+        const newUserInfo = { ...user };
+        newUserInfo.error = "Password length should be 6 minimum";
+        setUser(newUserInfo);
+      } else user.error = "";
+      setValidPassword(e.target.value);
+      const passwordLengthVaildation = e.target.value.length >= 6;
+      const PasswordNumberValidation = /\d{1}/.test(e.target.value);
+      isFromValid = passwordLengthVaildation && PasswordNumberValidation;
+    }
+    if (isFromValid) {
+      const newUserInfo = { ...user };
+      newUserInfo[e.target.name] = e.target.value;
+      setUser(newUserInfo);
+    }
   };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-   
+  const matchPassword = (e) => {
+    if (e.target.name === "confirmPassword") {
+      if (e.target.value === validPassword) {
+        const newUserInfo = { ...user };
+        newUserInfo.error = "Password Matched";
+        newUserInfo.matchedPassword = true;
+        setUser(newUserInfo);
+      } else {
+        const newUserInfo = { ...user };
+        newUserInfo.error = "Password is not matching";
+        newUserInfo.matchedPassword = false;
+        setUser(newUserInfo);
+      }
+    }
+  };
+  //all sign in methods from auth context
+  const { signup, login, signInWithGoogle} = useAuth();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (newUser) {
+      user.error = "";
+      await signup(user.email, user.password);
+    }
+    if (!newUser) {
+      user.error = "";
+      await login(user.email, user.password);
+    }
   };
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme} className="bg-white">
       <Container component="main" maxWidth="xs" className="mb-2">
         <CssBaseline />
         <Box
@@ -67,7 +115,7 @@ export default function SignIn() {
           </Typography>
           <Box
             component="form"
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
             noValidate
             sx={{ mt: 1 }}
           >
@@ -83,7 +131,7 @@ export default function SignIn() {
                   label="Your Name"
                   name="name"
                   autoFocus
-                  // onBlur={handleChange}
+                  onChange={handleChange}
                 />
               </Grid>
             )}
@@ -95,6 +143,7 @@ export default function SignIn() {
               label="Email Address"
               name="email"
               autoComplete="email"
+              onChange={handleChange}
               autoFocus
             />
             <TextField
@@ -105,6 +154,7 @@ export default function SignIn() {
               label="Password"
               type="password"
               id="password"
+              onChange={handleChange}
               autoComplete="current-password"
             />
             {newUser && (
@@ -123,14 +173,42 @@ export default function SignIn() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              sx={{ mt: 3, mb: 2 }}
-            >
-              Sign In
-            </Button>
+            <p>{user.error}</p>
+            {user.success && (
+              <p style={{ color: "green" }}>
+                {newUser ? "Signed Up" : "Logged In"} Successfully
+              </p>
+            )}
+            {newUser ? (
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                onClick={handleSubmit}
+                disabled={
+                  !(
+                    user.name &&
+                    user.email &&
+                    user.password &&
+                    user.matchedPassword
+                  )
+                }
+              >
+                Sign Up
+              </Button>
+            ) : (
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                onClick={handleSubmit}
+                disabled={!(user.email && user.password)}
+              >
+                Sign In
+              </Button>
+            )}
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
@@ -139,7 +217,10 @@ export default function SignIn() {
               </Grid>
               <Grid item>
                 <p
-                  onClick={() => setNewUser(!newUser)}
+                  onClick={() => {
+                    setNewUser(!newUser);
+                    user.error = " ";
+                  }}
                   className="new_user_btn"
                 >
                   {"Don't have an account? Sign Up"}
@@ -148,7 +229,13 @@ export default function SignIn() {
             </Grid>
             <div style={{ textAlign: "center" }}>
               <h5>Sign In with</h5>
-              <div style={{display: 'flex', justifyContent: "space-around", paddingBottom: '10px'}}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-around",
+                  paddingBottom: "10px",
+                }}
+              >
                 <img
                   onClick={signInWithGoogle}
                   style={{ width: "35px", marginRight: "20px" }}

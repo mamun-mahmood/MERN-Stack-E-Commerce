@@ -8,12 +8,12 @@ import Button from "@mui/material/Button";
 export default function CheckoutPage() {
   return (
     <div>
-      <div className="container">
+      <div className="container mt-4">
         <div className="row">
           <div className="col-md-8">
             <div className="container">
               <div className="row">
-                <div className="col-md-12 bg-white round">
+                <div className="col-md-12 bg-white round box_shadow">
                   <div
                     style={{
                       display: "flex",
@@ -27,9 +27,9 @@ export default function CheckoutPage() {
                     <p>Quantity</p>
                   </div>
                 </div>
-                <div className="col-md-12 bg-white mt-2 round p-0">
+                <div className="col-md-12 bg-white mt-2 round box_shadow p-0">
                   <div
-                    className="bg-light pl-2 pr-2"
+                    className="bg-light pl-2 pr-2 mt-1"
                     style={{ display: "flex", justifyContent: "space-between" }}
                   >
                     <p style={{ fontWeight: "600" }}>Package 1 of 1</p>
@@ -60,7 +60,7 @@ export default function CheckoutPage() {
                         justifyContent: "space-between",
                       }}
                     >
-                      <div className="d-flex">
+                      <div className="d-flex w-100">
                         <div>
                           <img
                             className="rounded p-1"
@@ -81,7 +81,7 @@ export default function CheckoutPage() {
                           <p>Product Catagory</p>
                         </div>
                       </div>
-                      <div>
+                      <div className="w-100">
                         <p
                           className="text-primary"
                           style={{ fontWeight: "580" }}
@@ -100,7 +100,7 @@ export default function CheckoutPage() {
               </div>
             </div>
           </div>
-          <div className="col-md-4 round rigt_side_section bg-white p-2">
+          <div className="col-md-4 round rigt_side_section box_shadow bg-white p-2">
             <h6 className="mt-2">Shipping & Billing</h6>
             <div className="delivery_address ">
               <p>

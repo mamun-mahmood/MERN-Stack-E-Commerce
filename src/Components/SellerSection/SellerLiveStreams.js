@@ -27,12 +27,16 @@ export default function SellerLiveStreams() {
         </p>
         <div className="container">
           <div className="row">
-            <VideoPlayerCard/>
-            <VideoPlayerCard/>
-            <VideoPlayerCard/>
-            <VideoPlayerCard/>
-            <VideoPlayerCard/>
-            <VideoPlayerCard/>
+            <div className="col-md-3 box_shadow round mb-2 bg-white p-2">
+              <p className="m-0 p-1" style={{textAlign: 'center', fontWeight: '580', color: '#326dcb'}}>1 hour ago</p>
+              <ReactPlayer
+                controls={true}
+                pip={true}
+                className="w-100 round"
+                url="https://youtu.be/6tyCQ2Tp2SQ"
+              />
+            </div>
+            
           </div>
         </div>
       </div>

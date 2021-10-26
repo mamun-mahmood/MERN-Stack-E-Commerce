@@ -145,10 +145,10 @@ export default function SellerSection() {
                     color: "grey",
                   }}
                 >
-                  <p className="m-0 p_btn" onClick={() => setSellerPage("About")}>About</p>
-                  <p className="m-0 p_btn" onClick={() => setSellerPage("Product")}>Product</p>
-                  <p className="m-0 p_btn" onClick={() => setSellerPage("Homepage")}>Homepage</p>
-                  <p className="m-0 p_btn" onClick={() => setSellerPage("LiveStreams")}>Live Streams</p>
+                  <p className="m-0 p_btn" style={{borderBottom: `${Sellerpage === "About"? "3px solid #326dcb" : "none"}`}} onClick={() => setSellerPage("About")}>About</p>
+                  <p className="m-0 p_btn" style={{borderBottom: `${Sellerpage === "Product"? "3px solid #326dcb" : "none"}`}} onClick={() => setSellerPage("Product")}>Product</p>
+                  <p className="m-0 p_btn" style={{borderBottom: `${Sellerpage === "Homepage"? "3px solid #326dcb" : "none"}`}} onClick={() => setSellerPage("Homepage")}>Homepage</p>
+                  <p className="m-0 p_btn" style={{borderBottom: `${Sellerpage === "LiveStreams"? "3px solid #326dcb" : "none"}`}} onClick={() => setSellerPage("LiveStreams")}>Live Streams</p>
                   <p className="m-0 p_btn">Chat Now</p>
                 </div>
               </div>

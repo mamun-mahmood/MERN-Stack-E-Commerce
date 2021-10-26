@@ -200,10 +200,10 @@ export default function SellerProductpage() {
                 <div className="col-md-12 bg-white p-4">
                   <div className="container">
                     <div className="row">
-                      <div className="col-md-4">
+                      <div className="col-md-4 mb-3">
                         <ProductCardMinimal Thumbnail1={Thumbnail1} />
                       </div>
-                      <div className="col-md-4">
+                      <div className="col-md-4 mb-3">
                         <ProductCardMinimal Thumbnail1={Thumbnail1} />
                       </div>
                     </div>

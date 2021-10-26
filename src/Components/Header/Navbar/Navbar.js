@@ -15,6 +15,7 @@ import SelectDD from "@mui/material/Select";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import ModalContainer from "../../Messenger/ModalContainer";
+import { useAuth } from "../../AuthContext";
 
 export const MyNavLink = styled(NavLink)`
   &.${(props) => props.activeClassName} {
@@ -88,7 +89,7 @@ export default function NavbarContainer() {
     setAge(event.target.value);
   };
   const [modalShow, setModalShow] = React.useState(false);
-
+  const {currentUser} = useAuth();
   return (
     <div>
       <div
@@ -221,7 +222,7 @@ export default function NavbarContainer() {
               style={{ textDecoration: "none", color: "black" }}
               activeClassName="anyClassNameWillWork"
             >
-              Login/Signup
+              {currentUser ? currentUser.email : "Login/Signup"}
             </MyNavLink>
           </p>
         </div>

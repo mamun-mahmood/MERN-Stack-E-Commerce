@@ -1,0 +1,62 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    flex: 0.65;
+}
+.chatBody{
+    flex: 1;
+    background-image: url('https://preview.redd.it/qwd83nc4xxf41.jpg?width=640&crop=smart&auto=webp&s=e82767fdf47158e80604f407ce4938e44afc6c25');
+    background-repeat: repeat;
+    background-position: center;
+    padding-left: 30px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.chatMsg{
+    position: relative;
+    font-size: 16px;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgb(110, 110, 216);
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.chatTimeStamp {
+    margin-left: 10px;
+    font-size: xx-small;
+}
+.chatName {
+    position:absolute;
+    top: -15px;
+    font-weight: 780;
+    font-size: xx-small;
+}
+.sentMsg {
+    margin-left: auto;
+    background-color: rgb(143, 189, 226);
+}
+.chatFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+    border-top: 1px solid lightgray;
+}
+.chatFooter > form {
+    flex: 1;
+    display: flex;
+}
+.chatFooter > form > input {
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+.chatFooter > form > button {
+    display: none;
+}
+.chatFooter > .MuiSvgIcon-root {
+    /* padding: 10px; */
+    color: grey;
+}
