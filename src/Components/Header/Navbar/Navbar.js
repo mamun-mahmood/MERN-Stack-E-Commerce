@@ -14,6 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import SelectDD from "@mui/material/Select";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import ModalContainer from "../../Messenger/ModalContainer";
 
 export const MyNavLink = styled(NavLink)`
   &.${(props) => props.activeClassName} {
@@ -86,6 +87,8 @@ export default function NavbarContainer() {
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <div>
       <div
@@ -110,19 +113,18 @@ export default function NavbarContainer() {
         </Link>
         <div className="search_field">
           <SelectDD
-          variant="standard"
+            variant="standard"
             className="ml-3"
             labelId="demo-simple-select-filled-label"
             id="demo-simple-select-filled"
             value={age}
             onChange={handleChange}
             disableUnderline
-            style={{ color: "white", backgroundColor: 'rgba(50, 109, 203)'}}
+            style={{ color: "white", backgroundColor: "rgba(50, 109, 203)" }}
           >
             <MenuItem value="All">ALL</MenuItem>
-            <MenuItem value={10}>Product</MenuItem>
-            <MenuItem value={20}>Services</MenuItem>
-            <MenuItem value={30}>Learning</MenuItem>
+            <MenuItem value="Product">Products</MenuItem>
+            <MenuItem value="Service">Services</MenuItem>
           </SelectDD>
           <div style={{ width: "70%" }}>
             <Select
@@ -164,14 +166,15 @@ export default function NavbarContainer() {
         </div>
         <div className="nav_right_items">
           <MailOutlineIcon className="nav_icons" />
-          <p className="nav_text">
-            <MyNavLink
-              to="/my_inbox"
-              style={{ textDecoration: "none", color: "black" }}
-              activeClassName="anyClassNameWillWork"
-            >
-              My Inbox
-            </MyNavLink>
+          <p
+            className="nav_text"
+            onClick={() => setModalShow(true)}
+            to=""
+            onClick={() => setModalShow(true)}
+            style={{ textDecoration: "none", color: "black" }}
+            activeClassName="anyClassNameWillWork"
+          >
+            My Inbox
           </p>
         </div>
         <div className="nav_right_items">
@@ -223,6 +226,7 @@ export default function NavbarContainer() {
           </p>
         </div>
       </div>
+      <ModalContainer show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   );
 }

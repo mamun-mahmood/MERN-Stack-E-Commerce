@@ -2,7 +2,12 @@
   border-radius: 15px;
   /* height: 400px; */
   width: 266px;
-  /* height: 433px; */
+}
+/* for minimal card component */
+.card_main_minimal {
+  border-radius: 15px;
+  /* height: 400px; */
+  width: 100%;
 }
 .card_main:hover {
   border: 1px solid grey;
