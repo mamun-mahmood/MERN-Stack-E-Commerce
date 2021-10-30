@@ -4,6 +4,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CallIcon from "@mui/icons-material/Call";
 import EmailIcon from "@mui/icons-material/Email";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 export default function CheckoutPage() {
   return (
@@ -40,7 +41,7 @@ export default function CheckoutPage() {
                       </span>
                     </p>
                   </div>
-                  <div className='p-2'>
+                  <div className="p-2">
                     <div
                       className="round pl-2 mt-2 bg-light"
                       style={{ border: "1px solid blue", width: "200px" }}
@@ -161,17 +162,19 @@ export default function CheckoutPage() {
               <p>Total</p>
               <p style={{ fontWeight: "600", color: "black" }}>$30</p>
             </div>
-            <Button
-              className="mb-4"
-              fullWidth
-              style={{
-                backgroundColor: "#346ccd",
-                textTransform: "capitalize",
-                color: "white",
-              }}
-            >
-              Proceed to Pay
-            </Button>
+            <Link to="/payment_page">
+              <Button
+                className="mb-4"
+                fullWidth
+                style={{
+                  backgroundColor: "#346ccd",
+                  textTransform: "capitalize",
+                  color: "white",
+                }}
+              >
+                Proceed to Pay
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

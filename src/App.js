@@ -26,6 +26,12 @@ import SourceByRegion from "./Components/SourceByRegion/SourceByRegion";
 import ScrollToTop from "./ScrollToTop";
 import SellerSection from "./Components/SellerSection/SellerSection";
 import AuthProvider from "./Components/AuthContext";
+import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import SellerGuide from "./Components/SellerSection/SellerGuide";
+import SellerSignIn from "./Components/Dashboard/SellerSignin/SellerSignIn";
+import PrivateRouteSeller from "./Components/PrivateRoute/PrivateRouteSeller";
+import StoreCreation from "./Components/Dashboard/StoreCreation";
 
 function App() {
   return (
@@ -55,7 +61,7 @@ function App() {
         <Route path="/signInuserPage">
           <SignUp />
         </Route>
-        <Route path="/product_details">
+        <Route path="/product_details/:_id">
           <ProductDetailsPage />
         </Route>
         <Route path="/checkout_here">
@@ -67,23 +73,34 @@ function App() {
         <Route path="/help_page">
           <HelpPage />
         </Route>
-        <Route path="/my_orders">
+        <PrivateRoute path="/my_orders">
           <MyOrderPage />
-        </Route>
+        </PrivateRoute>
         <Route path="/order_details">
           <OrderDetails />
         </Route>
-        <Route path="/my_profile">
+        <PrivateRoute path="/my_profile">
           <MyProfile />
-        </Route>
+        </PrivateRoute>
         <Route path="/order_track">
           <OrderTrack />
         </Route>
         <Route path="/seller_section">
+          <SellerGuide />
+        </Route>
+        <Route path="/seller_store/:storeID">
           <SellerSection />
         </Route>
+        <Route path="/seller_signIn">
+          <SellerSignIn />
+        </Route>
+        <Route path="/StoreCreation">
+          <StoreCreation />
+        </Route>
+        <PrivateRouteSeller path="/seller_dashboard">
+          <Dashboard />
+        </PrivateRouteSeller>
         <Footer />
-        <Switch></Switch>
       </Router>
     </AuthProvider>
   );

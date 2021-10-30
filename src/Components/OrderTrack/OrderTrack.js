@@ -8,7 +8,7 @@ import StepLabel from "@mui/material/StepLabel";
 export default function OrderTrack() {
   const steps = ["Order Placed", "Processing", "Shipped", "Deliverd"];
   return (
-    <div className="container">
+    <div className="container mt-3">
       <div className="row">
         <div className=" col-md-3 col-12 w-100 bg-white p-0 round">
           <div className="border_bottom">
@@ -76,18 +76,79 @@ export default function OrderTrack() {
             </div>
           </div>
         </div>
-        <div className="col-md-9 mt-3 mt-md-0">
-          <p className="m-0 text-dark mt-3" style={{textAlign: 'center', fontSize: '20px'}}>Order Tracking</p>
-          <div className="mt-5">
-            <Box sx={{ width: "100%",}}>
-              <Stepper activeStep={1} alternativeLabel>
-                {steps.map((label) => (
-                  <Step key={label}>
-                    <StepLabel>{label}</StepLabel>
-                  </Step>
-                ))}
-              </Stepper>
-            </Box>
+        <div className="col-md-8 ml-5 mt-3 mt-md-0">
+          <div className="bg-white">
+            <p
+              className="m-0 text-dark mt-3"
+              style={{ textAlign: "center", fontSize: "20px" }}
+            >
+              Order Tracking
+            </p>
+            <div
+              className="w-100"
+              style={{ display: "flex", justifyContent: "space-between" }}
+            >
+              <div className="left_border_track"> </div>
+              <div style={{ marginTop: "-2px" }}>
+                <p
+                  className="m-0 ml-3 "
+                  style={{ color: "rgba(50, 109, 203)" }}
+                >
+                  In Warehouse
+                </p>
+                <small>You order is on the way</small>
+              </div>
+              <div className="left_border_track"> </div>
+              <hr />
+            </div>
+            <div className="mt-5">
+              <Box sx={{ width: "100%" }}>
+                <Stepper activeStep={1} alternativeLabel>
+                  {steps.map((label) => (
+                    <Step key={label}>
+                      <StepLabel>{label}</StepLabel>
+                    </Step>
+                  ))}
+                </Stepper>
+              </Box>
+            </div>
+            <div className="p-5" style={{display: 'flex', justifyContent: 'center'}}>
+              <button className="btn" style={{backgroundColor: 'rgba(50, 109, 203)', color: 'white'}}>Customer Service</button>
+            </div>
+          </div>
+          <div className="bg-white mt-5 p-2">
+            <div>
+              <div className="bg-white box_shadow">
+                <p className="m-0">Thursday, 06/12/2022</p>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div>
+                  <p className="m-0">05:44:40</p>
+                </div>
+                <div>
+                  <p className="m-0">Delivered</p>
+                </div>
+                <div>
+                  <p className="mo">At your doorstep</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="bg-white box_shadow">
+                <p className="m-0">Thursday, 06/12/2022</p>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div>
+                  <p className="m-0">05:44:40</p>
+                </div>
+                <div>
+                  <p className="m-0">Delivered</p>
+                </div>
+                <div>
+                  <p className="mo">At your doorstep</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

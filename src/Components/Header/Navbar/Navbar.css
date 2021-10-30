@@ -17,6 +17,21 @@
 .navLogo {
   width: 170px;
 }
+.nav_text_p {
+  padding: 10px;
+}
+.nav_text_p_logout {
+  padding: 10px;
+}
+.nav_text_p:hover {
+  background-color: grey;
+  cursor: pointer;
+}
+.nav_text_p_logout:hover {
+  background-color: rgb(168, 39, 39);
+  cursor: pointer;
+  color: white;
+}
 .nav_icons {
   margin-top: 20px;
   margin-left: 25%;

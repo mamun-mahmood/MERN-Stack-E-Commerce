@@ -9,7 +9,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import Thumbnail1 from "../../Resources/thumb1212.png";
-import './ProductCard.css'
+import "./ProductCard.css";
 export default function RecipeReviewCard() {
   return (
     <Card style={{ width: "100%", height: "400px" }}>
@@ -34,15 +34,16 @@ export default function RecipeReviewCard() {
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae,
           ipsam.
         </Typography>
-      
       </CardContent>
-      <CardActions >
-        <button
-          className="btn btn-outline-secondary m-1"
-          style={{  color: "black" }}
-        >
-          Order Now
-        </button>
+      <CardActions>
+        <Link to="/checkout_here">
+          <button
+            className="btn btn-outline-secondary m-1"
+            style={{ color: "black" }}
+          >
+            Order Now
+          </button>
+        </Link>
         <button
           className="btn m-1"
           style={{ backgroundColor: "#1d5dc8", color: "white" }}

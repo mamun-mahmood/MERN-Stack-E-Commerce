@@ -28,7 +28,7 @@ export default function Topbar() {
         <p>Help</p>
         <Link to="/seller_section" style={{ color: "white" }}>
           <div>
-            <p style={{ textDecoration: "none" }}>For Buyers</p>
+            <p style={{ textDecoration: "none" }}>For Seller</p>
           </div>
         </Link>
         <p>Make Money On Globahub</p>

@@ -12,15 +12,15 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import "./Signup.css";
-import gLogo from "../../Resources/google.svg";
-import fbLogo from "../../Resources/facebook.svg";
-import { useAuth } from "../AuthContext";
+// import "./Signup.css";
+
+
 import { useHistory, useLocation } from "react-router";
+import { useAuth } from "../../AuthContext";
 
 const theme = createTheme();
 
-export default function SignIn() {
+export default function SellerSignIn() {
   const [newUser, setNewUser] = useState(false);
 
   const [user, setUser] = useState({
@@ -82,7 +82,7 @@ export default function SignIn() {
     }
   };
   //all sign in methods from auth context
-  const { signup, login, signInWithGoogle } = useAuth();
+  const { signup, login} = useAuth();
   let history = useHistory();
   let location = useLocation();
   let { from } = location.state || { from: { pathname: "/" } };
@@ -115,7 +115,7 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            {newUser ? "Sign Up" : "Sign In"}
+            {newUser ? "Seller Sign Up" : "Seller Sign In"}
           </Typography>
           <Box
             component="form"
@@ -231,33 +231,6 @@ export default function SignIn() {
                 </p>
               </Grid>
             </Grid>
-            <div style={{ textAlign: "center" }}>
-              <h5>Sign In with</h5>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-around",
-                  paddingBottom: "10px",
-                }}
-              >
-                <img
-                  onClick={async (e) => {
-                    e.preventDefault();
-                    await signInWithGoogle();
-                    history.replace(from);
-                  }}
-                  style={{ width: "35px", marginRight: "20px" }}
-                  src={gLogo}
-                  alt="image"
-                />
-                <img
-                  // onClick={fbSignIn}
-                  style={{ width: "35px" }}
-                  src={fbLogo}
-                  alt="image"
-                />
-              </div>
-            </div>
           </Box>
         </Box>
       </Container>

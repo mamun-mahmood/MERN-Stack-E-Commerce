@@ -5,7 +5,7 @@ import "react-circular-progressbar/dist/styles.css";
 import ContentSwiper from "../ContentSwiper/ContentSwiper";
 import { Table } from "react-bootstrap";
 
-export default function SellerAbout() {
+export default function SellerAbout(props) {
   const percentage = 66;
   const slideData = [
     {
@@ -49,6 +49,14 @@ export default function SellerAbout() {
         "https://static.nike.com/a/images/f_auto/dpr_3.0/h_500,c_limit/g1ljiszo4qhthfpluzbt/nike-joyride.jpg",
     },
   ];
+  const {
+    aboutSeller,
+    timestamp,
+    location,
+    country,
+    website,
+    sellerName,
+  } = props.data;
   return (
     <div>
       <div className="container mt-3">
@@ -213,11 +221,7 @@ export default function SellerAbout() {
         <div className="row">
           <div className="col-md-4 bg-white round box_shadow p-4">
             <p className="m-0">About</p>
-            <small>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut rem
-              porro molestiae sapiente laudantium perspiciatis? Harum neque
-              commodi iste placeat.
-            </small>
+            <small>{aboutSeller}</small>
             <div
               className="bg-light p-2 round mt-1"
               style={{
@@ -227,7 +231,7 @@ export default function SellerAbout() {
               }}
             >
               <small>Joined</small>
-              <small>March 26th, 2017</small>
+              <small>{new Date(timestamp).toUTCString()}</small>
             </div>
             <div
               className="bg-light p-2 round mt-1"
@@ -238,7 +242,7 @@ export default function SellerAbout() {
               }}
             >
               <small>City</small>
-              <small>Los Angeles, California</small>
+              <small>{location}</small>
             </div>
             <div
               className="bg-light p-2 round mt-1"
@@ -249,18 +253,7 @@ export default function SellerAbout() {
               }}
             >
               <small>Country</small>
-              <small>United States</small>
-            </div>
-            <div
-              className="bg-light p-2 round mt-1"
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                color: "grey",
-              }}
-            >
-              <small>Age</small>
-              <small>32 Years</small>
+              <small>{country}</small>
             </div>
             <div
               className="bg-light p-2 round mt-1"
@@ -271,7 +264,7 @@ export default function SellerAbout() {
               }}
             >
               <small>Web</small>
-              <small>www.xyz.com</small>
+              <small>{website}</small>
             </div>
             <p className="m-0 mt-2">Personal Info</p>
             <div

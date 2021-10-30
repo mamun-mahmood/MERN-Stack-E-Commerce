@@ -2,8 +2,10 @@ import { Button } from "@mui/material";
 import React from "react";
 import { Dropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 import "./MyProfile.css";
 export default function MyProfile() {
+  const {currentUser} = useAuth();
   return (
     <div className="container mt-3">
       <div className="row">
@@ -39,7 +41,7 @@ export default function MyProfile() {
                     <p className="m-0">Full Name</p>
                     <input
                       className="input_style"
-                      placeholder="Max Carl"
+                      placeholder={currentUser? currentUser.displayName : "N/A"}
                       type="text"
                     />
                   </div>
@@ -48,14 +50,14 @@ export default function MyProfile() {
                     <input
                       className="input_style"
                       type="text"
-                      placeholder="ma******@gmail.com"
+                      placeholder={currentUser ? currentUser.email : "N/A"}
                     />
                   </div>
                   <div className="col-md-12 mb-5">
                     <p className="m-0">Mobile</p>
                     <input
                       className="input_style"
-                      placeholder="+41********68"
+                      placeholder={currentUser ? currentUser.phoneNumber : "N/A"}
                       type="text"
                     />
                   </div>

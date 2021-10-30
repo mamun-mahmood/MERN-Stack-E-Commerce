@@ -1,16 +1,24 @@
 import {
   createUserWithEmailAndPassword,
-  GoogleAuthProvider,
   onAuthStateChanged,
   signInWithEmailAndPassword,
-  signInWithPopup,
   signOut,
+  getAuth,
   updateProfile,
 } from "@firebase/auth";
+import { initializeApp } from "firebase/app";
 import { createContext, React, useEffect, useContext, useState } from "react";
-import { auth } from "../FirebaseConfig";
 
-const AuthContext = createContext({
+const firebaseApp = initializeApp({
+  apiKey: "AIzaSyA71xfgyM1oB7nV-1WkYibWfqnI8-jdKAg",
+  authDomain: "imponexposellers.firebaseapp.com",
+  projectId: "imponexposellers",
+  storageBucket: "imponexposellers.appspot.com",
+  messagingSenderId: "1037058045706",
+  appId: "1:1037058045706:web:59c08b972c4df0623fecf3",
+});
+const auth = getAuth(firebaseApp);
+const AuthContextSeller = createContext({
   currentUser: null,
   //   signInWithGoogle: () => Promise,
   //   login: () => Promise,
@@ -21,24 +29,20 @@ const AuthContext = createContext({
 });
 
 export const useAuth = () => {
-  return useContext(AuthContext);
+  return useContext(AuthContextSeller);
 };
 
 export default function AuthProvider({ children }) {
-  const [currentUser, setCurrentUser] = useState({email: ''});
+  const [currentUser, setCurrentUser] = useState();
   const signup = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const login = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
-  const signInWithGoogle = () => {
-    const provider = new GoogleAuthProvider();
-    return signInWithPopup(auth, provider);
+  const updateUserProfile = (username) => {
+    return updateProfile(auth.currentUser, { displayName: username });
   };
-  // const updateUserProfile = () => {
-  //   return updateProfile(auth.currentUser, displayName);
-  // };
   const logout = () => {
     return signOut(auth);
   };
@@ -55,10 +59,12 @@ export default function AuthProvider({ children }) {
     currentUser,
     signup,
     login,
-    signInWithGoogle,
-    // updateUserProfile,
+    updateUserProfile,
     logout,
   };
-
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  return (
+    <AuthContextSeller.Provider value={value}>
+      {children}
+    </AuthContextSeller.Provider>
+  );
 }

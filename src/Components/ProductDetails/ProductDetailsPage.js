@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductDetails.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -19,7 +19,11 @@ import ForumRoundedIcon from "@mui/icons-material/ForumRounded";
 import ProductCar2 from "../ProductCard2/ProductCar2";
 import ChatBubbleIcon from "@mui/icons-material/ChatBubble";
 import ContentSwiper from "../ContentSwiper/ContentSwiper";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
+
 export default function ProductDetailsPage() {
+  const productID = useParams();
   const slideData = [
     {
       item:
@@ -64,6 +68,25 @@ export default function ProductDetailsPage() {
   ];
   const [companyDetails, setCompanyDetails] = useState(true);
   const [GroupBuy, setGroupBuy] = useState(false);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5001/products/${productID._id}`)
+      .then((res) => {
+        setProducts(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  const {
+    productTitle,
+    shopName,
+    imgURL,
+    description,
+    startingPrice,
+    shippingCharge,
+    discountPercentage,
+    sellerEmail,
+  } = products[0];
   return (
     <div className="card">
       <div className="container-fluid p-4">
@@ -71,22 +94,18 @@ export default function ProductDetailsPage() {
           <div className="col-md-4">
             <Carousel>
               <div>
-                {/* <InnerImageZoom src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/eehabecsfly0wy1pxxve/air-max-270-older-shoe-9KTdjGPz.png" /> */}
-                <img
-                  className="product_img"
-                  src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/eehabecsfly0wy1pxxve/air-max-270-older-shoe-9KTdjGPz.png"
-                />
+                <img className="product_img" src={imgURL} />
               </div>
               <div>
-                <img src="https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/35adc820-f65a-4b6e-85cb-49447468336f/air-max-zephyr-shoe-zX5mZP.png" />
+                <img className="product_img" src={imgURL} />
               </div>
               <div>
-                <img src="https://photos.queens.cz/queens/2021-04/large/nike-air-max-zephyr-111362_1.jpg" />
+                <img className="product_img" src={imgURL} />
               </div>
             </Carousel>
           </div>
           <div className="product_info_section bg-white col-md-5 g-0">
-            <h4 className="product-title">Nike Air Max Zephyr 111362</h4>
+            <h4 className="product-title">{productTitle}</h4>
             <div
               className="rating"
               style={{ borderBottom: "1px solid rgb(221, 220, 220)" }}
@@ -112,13 +131,15 @@ export default function ProductDetailsPage() {
               <div className="brand_name_sec">
                 <p>
                   <span style={{ fontWeight: "600" }}>Brand: </span>{" "}
-                  <span className="p_style">Nike | More Product From Nike</span>
+                  <span className="p_style">
+                    {shopName} | More Product From Nike
+                  </span>
                 </p>
               </div>
             </div>
             <div className="price_section" style={{ paddingTop: "15px" }}>
               <p>
-                Price: <span className="price">$220</span>
+                Price: <span className="price">${startingPrice}</span>
               </p>
             </div>
             <div className="color_family">
@@ -209,13 +230,15 @@ export default function ProductDetailsPage() {
               style={{ display: "flex", justifyContent: "space-around" }}
             >
               <div className="w-100">
-                <Button
-                  fullWidth
-                  style={{ backgroundColor: "#346ccd", marginRight: "10px" }}
-                  variant="contained"
-                >
-                  Buy Now
-                </Button>
+                <Link to="/checkout_here">
+                  <Button
+                    fullWidth
+                    style={{ backgroundColor: "#346ccd", marginRight: "10px" }}
+                    variant="contained"
+                  >
+                    Buy Now
+                  </Button>
+                </Link>
               </div>
               <div className="w-100">
                 <Button
@@ -349,7 +372,9 @@ export default function ProductDetailsPage() {
             </Button>
             <div className="seller_info w-100">
               <p>Sold By</p>
-              <p className="p_style">Nike Flagship Store</p>
+              <Link to={`/seller_store/${sellerEmail}`}>
+                <p className="p_style">{shopName}</p>
+              </Link>
               <div
                 style={{
                   display: "flex",
@@ -435,7 +460,7 @@ export default function ProductDetailsPage() {
                 {companyDetails ? (
                   <div className="product_details_section col-md-12 bg-light round">
                     <h6 className="mt-3" style={{ textAlign: "center" }}>
-                      Product details of <span>Nike Air Max Zephyr 111362</span>{" "}
+                      Product details of <span>{productTitle}</span>{" "}
                     </h6>
                     <div className="container-fluid">
                       <div className="row">

@@ -16,6 +16,10 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import ModalContainer from "../../Messenger/ModalContainer";
 import { useAuth } from "../../AuthContext";
+import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
+import BookmarkIcon from "@mui/icons-material/Bookmark";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import LogoutIcon from "@mui/icons-material/Logout";
 
 export const MyNavLink = styled(NavLink)`
   &.${(props) => props.activeClassName} {
@@ -89,7 +93,7 @@ export default function NavbarContainer() {
     setAge(event.target.value);
   };
   const [modalShow, setModalShow] = React.useState(false);
-  const {currentUser} = useAuth();
+  const { currentUser, logout } = useAuth();
   return (
     <div>
       <div
@@ -190,7 +194,7 @@ export default function NavbarContainer() {
             </MyNavLink>
           </p>
         </div>
-        <div className="nav_right_items">
+        {/* <div className="nav_right_items">
           <AddShoppingCartIcon className="nav_icons" />
           <p className="nav_text">
             <MyNavLink
@@ -201,7 +205,7 @@ export default function NavbarContainer() {
               My Cart
             </MyNavLink>
           </p>
-        </div>
+        </div> */}
         <div className="nav_right_items">
           <NotificationsIcon className="nav_icons" />
           <p className="nav_text">
@@ -214,17 +218,140 @@ export default function NavbarContainer() {
             </MyNavLink>
           </p>
         </div>
-        <div className="nav_right_items">
-          <Avatar className="avatar" />
-          <p className="nav_text">
+        <div className="nav_right_items dropdown">
+          <Avatar
+            className="avatar"
+            src={currentUser ? currentUser.photoURL : ""}
+          />
+          <p className="nav_text dropbtn">
             <MyNavLink
-              to="/signInuserPage"
+              to="/my_profile"
               style={{ textDecoration: "none", color: "black" }}
               activeClassName="anyClassNameWillWork"
             >
-              {currentUser ? currentUser.email : "Login/Signup"}
+              {currentUser ? currentUser.displayName : "Login/Signup"}
             </MyNavLink>
           </p>
+          {currentUser && (
+            <div
+              className="dropdown-content logout_dropdown"
+              style={{
+                textAlign: "center",
+                marginLeft: "-100px",
+                marginTop: "-10px",
+              }}
+            >
+              <MyNavLink
+                to="/my_profile"
+                style={{ textDecoration: "none", color: "black" }}
+                activeClassName="anyClassNameWillWork"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <p className="m-0">
+                    <EmojiEmotionsIcon />
+                  </p>
+                  <p className="m-0">Manage my Account</p>
+                </div>
+              </MyNavLink>
+              <MyNavLink
+                to="/my_saved_items"
+                style={{ textDecoration: "none", color: "black" }}
+                activeClassName="anyClassNameWillWork"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <p className="m-0">
+                    <BookmarkIcon />
+                  </p>
+                  <p className="m-0">My Saved Items</p>
+                </div>
+              </MyNavLink>
+              <MyNavLink
+                to="/my_group_imports"
+                style={{ textDecoration: "none", color: "black" }}
+                activeClassName="anyClassNameWillWork"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <p className="m-0">
+                    <BookmarkIcon />
+                  </p>
+                  <p className="m-0">My Group Imports</p>
+                </div>
+              </MyNavLink>
+              <MyNavLink
+                to="/my_interest"
+                style={{ textDecoration: "none", color: "black" }}
+                activeClassName="anyClassNameWillWork"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <p className="m-0">
+                    <BookmarkIcon />
+                  </p>
+                  <p className="m-0">My Interest</p>
+                </div>
+              </MyNavLink>
+              <MyNavLink
+                to="/my_purchased"
+                style={{ textDecoration: "none", color: "black" }}
+                activeClassName="anyClassNameWillWork"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <p className="m-0">
+                    <ShoppingBasketIcon />
+                  </p>
+                  <p className="m-0">My Purchased</p>
+                </div>
+              </MyNavLink>
+              <div
+                className="nav_text_p_logout m-0"
+                onClick={async (e) => {
+                  e.preventDefault();
+                  await logout();
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
+                >
+                  <p className="m-0">
+                    <LogoutIcon />
+                  </p>
+                  <p className="m-0">Logout</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <ModalContainer show={modalShow} onHide={() => setModalShow(false)} />

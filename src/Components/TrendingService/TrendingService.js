@@ -29,28 +29,7 @@ export default function TrendingService() {
         >
           <Carousel breakPoints={breakPoints}>
             <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
-            </div>
-            <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
-            </div>
-            <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
-            </div>
-            <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
-            </div>
-            <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
-            </div>
-            <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
-            </div>
-            <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
-            </div>
-            <div className="mb-4">
-              <ProductCardCustom Thumbnail1={Thumbnail1} />
+              {/* <ProductCardCustom Thumbnail1={Thumbnail1} /> */}
             </div>
           </Carousel>
         </div>

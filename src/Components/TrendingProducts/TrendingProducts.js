@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./TrendingProducts.css";
 import ProductCardCustom from "../ProductCardCustom/ProductCardCustom";
 import Carousel from "react-elastic-carousel";
-import Thumbnail1 from "../../Resources/thumb1212.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import axios from "axios";
 
 export default function TrendingProducts() {
   const breakPoints = [
@@ -13,9 +13,19 @@ export default function TrendingProducts() {
     { width: 1100, itemsToShow: 4 },
     { width: 1600, itemsToShow: 5 },
   ];
+  const [allProducts, setAllProducts] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5001/allProducts")
+      .then((res) => {
+        setAllProducts(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
+  console.log(allProducts);
   return (
-    <div className="bg-white mt-5" style={{position: 'relative'}}>
-      <div style={{display: 'flex',justifyContent: 'space-between'}}>
+    <div className="bg-white mt-5" style={{ position: "relative" }}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div className="left_border"></div>
         <div className="right_border"></div>
       </div>
@@ -27,30 +37,11 @@ export default function TrendingProducts() {
         style={{ width: "98%", marginLeft: "1%" }}
       >
         <Carousel breakPoints={breakPoints}>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
-          <div className="mb-4">
-            <ProductCardCustom Thumbnail1={Thumbnail1} />
-          </div>
+          {allProducts.map((pd) => (
+            <div className="mb-4">
+              <ProductCardCustom key={pd._id} data={pd} />
+            </div>
+          ))}
         </Carousel>
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
