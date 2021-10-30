@@ -22,7 +22,6 @@ export default function TrendingProducts() {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(allProducts);
   return (
     <div className="bg-white mt-5" style={{ position: "relative" }}>
       <div style={{ display: "flex", justifyContent: "space-between" }}>

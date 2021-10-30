@@ -68,7 +68,7 @@ export default function ProductDetailsPage() {
   ];
   const [companyDetails, setCompanyDetails] = useState(true);
   const [GroupBuy, setGroupBuy] = useState(false);
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([{}]);
   useEffect(() => {
     axios
       .get(`http://localhost:5001/products/${productID._id}`)
@@ -87,6 +87,7 @@ export default function ProductDetailsPage() {
     discountPercentage,
     sellerEmail,
   } = products[0];
+  console.log(products.imgURL);
   return (
     <div className="card">
       <div className="container-fluid p-4">

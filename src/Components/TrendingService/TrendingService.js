@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./TrendingService.css";
 import Carousel from "react-elastic-carousel";
 import ProductCardCustom from "../ProductCardCustom/ProductCardCustom";
 import Thumbnail1 from "../../Resources/gym.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import axios from "axios";
 
 export default function TrendingService() {
   const breakPoints = [
@@ -13,6 +14,15 @@ export default function TrendingService() {
     { width: 1100, itemsToShow: 4 },
     { width: 1600, itemsToShow: 5 },
   ];
+  const [allProducts, setAllProducts] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:5001/allProducts")
+      .then((res) => {
+        setAllProducts(res.data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
   return (
     <div className="bg-white mt-5">
       <div style={{ display: "flex", justifyContent: "space-between" }}>
@@ -28,9 +38,11 @@ export default function TrendingService() {
           style={{ width: "98%", marginLeft: "1%" }}
         >
           <Carousel breakPoints={breakPoints}>
-            <div className="mb-4">
-              {/* <ProductCardCustom Thumbnail1={Thumbnail1} /> */}
-            </div>
+            {
+              allProducts.map(pd => <div className="mb-4">
+              <ProductCardCustom key={pd._id} data={pd} />
+            </div>)
+            }
           </Carousel>
         </div>
       </div>
