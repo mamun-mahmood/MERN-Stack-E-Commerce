@@ -77,7 +77,7 @@ const AddProduct = () => {
   const handleSubmit = (e) => {
     formData.timeStamp = Date.now();
     setImgLoad(true);
-    axios.post("http://localhost:5001/addproduct", formData).then(() => {
+    axios.post("https://quiet-stream-33548.herokuapp.com/addproduct", formData).then(() => {
       setImgLoad(false);
       document.getElementById("myForm").reset();
       alert("Successfully Added!");

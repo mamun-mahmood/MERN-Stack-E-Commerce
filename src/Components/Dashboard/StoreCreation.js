@@ -153,7 +153,7 @@ const StoreCreation = () => {
     formData.timeStamp = Date.now();
     setImgLoad(true);
     axios
-      .post("http://localhost:5001/addNewSeller", formData)
+      .post("https://quiet-stream-33548.herokuapp.com/addNewSeller", formData)
       .then(() => {
         setImgLoad(false);
         document.getElementById("myForm").reset();

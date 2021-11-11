@@ -16,7 +16,7 @@ export default function TrendingProducts() {
   const [allProducts, setAllProducts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5001/allProducts")
+      .get("https://quiet-stream-33548.herokuapp.com/allProducts")
       .then((res) => {
         setAllProducts(res.data);
       })

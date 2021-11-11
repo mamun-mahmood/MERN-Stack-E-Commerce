@@ -25,7 +25,7 @@ export default function SellerSection() {
   console.log(currentUser.email);
   useEffect(() => {
     axios
-      .get(`http://localhost:5001/seller_info/${sellerEmail}`)
+      .get(`https://quiet-stream-33548.herokuapp.com/seller_info/${sellerEmail}`)
       .then((res) => {
         setData(res.data[0]);
       })

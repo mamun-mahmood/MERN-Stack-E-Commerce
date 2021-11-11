@@ -71,7 +71,7 @@ export default function ProductDetailsPage() {
   const [products, setProducts] = useState([{}]);
   useEffect(() => {
     axios
-      .get(`http://localhost:5001/products/${productID._id}`)
+      .get(`https://quiet-stream-33548.herokuapp.com/products/${productID._id}`)
       .then((res) => {
         setProducts(res.data);
       })
