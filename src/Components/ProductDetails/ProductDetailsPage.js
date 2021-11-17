@@ -87,7 +87,6 @@ export default function ProductDetailsPage() {
     discountPercentage,
     sellerEmail,
   } = products[0];
-  console.log(products.imgURL);
   return (
     <div className="card">
       <div className="container-fluid p-4">

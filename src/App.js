@@ -32,6 +32,7 @@ import SellerGuide from "./Components/SellerSection/SellerGuide";
 import SellerSignIn from "./Components/Dashboard/SellerSignin/SellerSignIn";
 import PrivateRouteSeller from "./Components/PrivateRoute/PrivateRouteSeller";
 import StoreCreation from "./Components/Dashboard/StoreCreation";
+import LearningPage from "./Components/LearningPage/LearningPage";
 
 function App() {
   return (
@@ -72,6 +73,9 @@ function App() {
         </Route>
         <Route path="/help_page">
           <HelpPage />
+        </Route>
+        <Route path="/learning_page">
+          <LearningPage/>
         </Route>
         <PrivateRoute path="/my_orders">
           <MyOrderPage />

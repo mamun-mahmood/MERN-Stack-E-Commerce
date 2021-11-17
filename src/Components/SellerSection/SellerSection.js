@@ -16,45 +16,50 @@ import SellerHomepage from "./SellerHomepage";
 import SellerLiveStreams from "./SellerLiveStreams";
 import axios from "axios";
 import { useAuth } from "../AuthContext";
-
+import {  useParams } from "react-router-dom";
 export default function SellerSection() {
   const [Sellerpage, setSellerPage] = React.useState("Homepage");
-  const { currentUser } = useAuth();
-  const sellerEmail = currentUser && currentUser.email;
-  const [data, setData] = useState([{}]);
-  console.log(currentUser.email);
-  useEffect(() => {
-    axios
-      .get(`https://quiet-stream-33548.herokuapp.com/seller_info/${sellerEmail}`)
-      .then((res) => {
-        setData(res.data[0]);
-      })
-      .catch((err) => console.log(err));
-  }, [sellerEmail]);
-  const {
-    // sellerName,
-    // aboutSeller,
-    // country,
-    // location,
-    // phoneNumber,
-    // fbUrl,
-    youtubeUrl,
-    // whatsappNO,
-    // website,
-    shopName,
-    // bussinestype,
-    // mainProducts,
-    // totalEployees,
-    // totalRevenue,
-    // yearEstablished,
-    // certifications,
-    // mainMarket,
-    bannerImg,
-    profileImg,
-    // albumImg,
-    // totalProducts,
-    // timeStamp,
-  } = data;
+  // const email = useParams();
+  // // const { currentUser } = useAuth();
+  // const sellerEmail = email;
+  // const [data, setData] = useState([{}]);
+  // useEffect(() => {
+  //   axios
+  //     .get(`https://quiet-stream-33548.herokuapp.com/seller_info/${sellerEmail}`)
+  //     .then((res) => {
+  //       setData(res.data[0]);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }, [sellerEmail]);
+  const youtubeUrl = 'youtube.com';
+  const shopName = "Electro Mart";
+  const bannerImg = "https://i.ibb.co/TThRTZC/blog-site-cover-1920x700-1-2.jpg";
+  const profileImg = ""
+  // const {
+  //   // sellerName,
+  //   // aboutSeller,
+  //   // country,
+  //   // location,
+  //   // phoneNumber,
+  //   // fbUrl,
+  //   // youtubeUrl
+  //   // whatsappNO,
+  //   // website,
+  //   // shopName,
+  //   // bussinestype,
+  //   // mainProducts,
+  //   // totalEployees,
+  //   // totalRevenue,
+  //   // yearEstablished,
+  //   // certifications,
+  //   // mainMarket,
+  //   // bannerImg,
+  //   // profileImg,
+  //   // albumImg,
+  //   // totalProducts,
+  //   // timeStamp,
+  // } = data;
+  const data = [{}]
   return (
     <div className="container-fluid w-75 mt-3">
       <div className="seller_section_top bg-white round box_shadow pb-4">
